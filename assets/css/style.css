@@ -269,7 +269,7 @@ body {
     height: 558px;
     top: 0;
     left: -120px;
-    background-image: url('../images/about-bg-1.png');
+    background-image: url('../images/about-bg-1.webp');
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 111;
@@ -282,7 +282,7 @@ body {
     height: 558px;
     bottom: 0;
     right: -484px;
-    background-image: url('../images/about-bg-2.png');
+    background-image: url('../images/about-bg-2.webp');
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 111;
