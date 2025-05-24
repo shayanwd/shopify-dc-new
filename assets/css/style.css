@@ -1,0 +1,563 @@
+@font-face {
+    font-family: "EditorsNote";
+    src: url(../fonts/EditorsNote-MediumItalic.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.editor {
+    font-family: "EditorsNote";
+}
+
+.hd-container {
+    width: 100%;
+    max-width: 1880px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.hr-container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.my-container {
+    width: 100%;
+    max-width: 1215px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.top-bar li a img {
+    width: 24px;
+    height: 24px;
+}
+
+.top-bar li a span {
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 110.00000000000001%;
+    letter-spacing: -4%;
+    color: #1C1C1C;
+}
+
+.hero-sec .hr-left {
+    width: 100%;
+    max-width: 614px;
+}
+
+.short-title {
+    width: fit-content;
+    border-radius: 40px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110.01%;
+    color: #161616;
+    position: relative;
+    background: linear-gradient(90deg, #F4FFDF 0%, #D7FF89 100%);
+}
+
+.short-title::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    right: -1px;
+    background: linear-gradient(90deg, #E0FFA4 0%, #BDFF3C 100%);
+    border-radius: 40px;
+    z-index: -1;
+}
+
+.sec-title {
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 110.00000000000001%;
+    color: #1C1C1C;
+}
+
+.sec-title .editor {
+    font-size: 84px;
+    color: #95BF47;
+}
+
+.disc {
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    color: #5A5A5A;
+}
+
+.serv-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 90.01%;
+    color: #95BF47;
+    text-decoration: underline;
+}
+
+.serv-platform {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.serv-platform img {
+    width: 100%;
+    max-width: 80px;
+    height: 80px;
+}
+
+.hero-sec .hr-right {
+    width: 100%;
+    max-width: 466px;
+}
+
+.hr-right form {
+    width: 100%;
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+.hr-right form::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    right: -1px;
+    background: linear-gradient(90deg, #567BFF 0%, #567BFF 100%);
+    border-radius: 16px;
+    z-index: -1;
+}
+
+.hr-right form h1 {
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 110%;
+    color: #1C1C1C;
+}
+
+.hr-right form .field-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.hr-right form .field-row .field-column {
+    width: 100%;
+}
+
+.hr-right form .field-row .field-column input,
+.hr-right form .field-row .field-column select,
+.hr-right form .field-row .field-column textarea {
+    padding: 12px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 3px 0px #0000000F;
+    border: 1px solid #00000014;
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110.00000000000001%;
+    color: #AAAAAA;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.hr-right form .field-row .field-column select {
+    appearance: none;
+    background-image: url("../images/icons/arrow-down-01.webp");
+    background-position: right 12px center;
+    background-size: 16px;
+    background-repeat: no-repeat;
+}
+
+.fr-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px 0;
+    background: linear-gradient(90deg, #567BFF 0%, #8EA7FF 100%);
+    border: 3px solid #FFFFFF33;
+    box-shadow: 0px 7px 24px 0px #8EA7FF73;
+    border-radius: 20px;
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 90%;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.fr-button::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    bottom: -3px;
+    right: -3px;
+    background: #FFFFFF33;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.fr-button img {
+    width: 100%;
+    max-width: 32px;
+    height: 32px;
+}
+
+.hr-right .bot-txt ul {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.hr-right .bot-txt ul li {
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110.00000000000001%;
+    color: #1C1C1C;
+}
+
+.hr-right .bot-txt ul li.for-bullet {
+    position: relative;
+    padding-left: 13px;
+}
+
+.hr-right .bot-txt ul li.for-bullet::before {
+    content: '';
+    display: block;
+    background-color: #95BF47;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: calc(60% - 5px);
+    left: 0;
+    border-radius: 50%;
+}
+
+.about-sec {
+    position: relative;
+}
+
+.about-sec::before {
+    content: '';
+    position: absolute;
+    width: 981px;
+    height: 558px;
+    top: 0;
+    left: 0;
+    background-image: url('../images/about-bg-1.png');
+    background-repeat: no-repeat;
+    background-size: 118px;
+    z-index: 111;
+}
+
+.bf-title {
+    width: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110.00000000000001%;
+    color: #FFFFFF;
+    background: linear-gradient(90deg, #0E1600 0%, #182500 100%);
+    border-radius: 40px;
+    position: relative;
+    padding: 12px;
+}
+
+.bf-title::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    right: -1px;
+    background: linear-gradient(90deg, #162100 0%, #689F00 100%);
+    border-radius: 40px;
+    z-index: -1;
+}
+
+.bf-title img {
+    height: 16px;
+    width: 16px;
+}
+
+.about-top {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-top .sec-title {
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.about-top .sec-title span {
+    font-size: 64px;
+}
+
+.about-top p.disc {
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 150%;
+}
+
+.about-bottom .for-pr-ex {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.about-bottom .for-pr-ex .ex-box h2 {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 60px;
+    line-height: 90%;
+    color: #FFFFFF;
+}
+
+.about-bottom .for-pr-ex .ex-box span {
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.btn-boxes a {
+    width: fit-content;
+    padding: 20px 40px;
+    font-size: 16px;
+}
+
+.btn-boxes a.pr-btn {
+    background: #2C2C2C;
+    border: none;
+    box-shadow: none;
+    border: 1px solid #2C2C2C;
+}
+
+.btn-boxes a.pr-btn::before {
+    display: none;
+}
+
+
+.ex-top .sec-title span {
+    font-size: 64px;
+}
+
+.work-direct span {
+    padding: 10px;
+    background-color: #95BF47;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 90%;
+    color: #FFFFFF;
+}
+
+
+.ex-top p.disc {
+    font-size: 16px;
+    text-align: center;
+    line-height: 150%;
+}
+
+
+.ex-bottom .grad {
+    background: linear-gradient(90deg, #95BF47 0%, #9FBB6B 100%);
+}
+
+.ex-bottom .grad-blue {
+    background: linear-gradient(90deg, #567BFF 0%, #8EA7FF 100%);
+}
+
+.ex-bottom .serv-icon {
+    width: 48px;
+    height: 48px;
+    padding: 9px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0px 4px 5px 0px #0000001A;
+}
+
+.ex-bottom .serv-title {
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 110.00000000000001%;
+    color: #1C1C1C;
+}
+
+.ex-bottom .grad .serv-title {
+    color: #FFFFFF;
+}
+
+.ex-bottom .serv-disc {
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #1C1C1C;
+}
+
+.ex-bottom .grad .serv-disc {
+    color: #FFFFFF;
+}
+
+.ex-bottom .serv-box a {
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #1C1C1C;
+}
+
+.ex-bottom .grad a {
+    color: #FFFFFF;
+}
+
+.ex-bottom .serv-box {
+    border: 1px solid #1C1C1C1A;
+    border-radius: 20px;
+}
+
+.ex-bottom .serv-box .left-img {
+    width: 100%;
+    max-width: 254px;
+    height: 250px;
+    background-color: #FFFFFF66;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 20px 0px #00000021;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ex-bottom .serv-box .left-img img {
+    width: 100%;
+    max-width: 244px;
+    height: 240px;
+    border-radius: 20px;
+    object-position: center;
+}
+
+
+
+.appoint-sec {
+    background-image: url('../images/book-bg.webp');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.appoint-sec .editor {
+    font-size: 64px;
+    color: #FFFFFF;
+}
+
+.appoint-sec .sec-title {
+    color: #FFFFFF;
+}
+
+.appoint-sec .fr-button {
+    width: fit-content;
+    padding: 20px 64px;
+}
+
+
+footer {
+    background: radial-gradient(33.31% 61.69% at 49.4% 51.91%, #2D2D2D 0%, #1C1C1C 75.97%);
+}
+
+.footer-top {
+    grid-template-columns: 483px 1fr;
+    gap: 133px;
+}
+
+.ft-left img.footer-logo {
+    width: 100%;
+    max-width: 308px;
+    height: auto;
+}
+
+.ft-left ul li a {
+    width: 48px;
+    height: 48px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+.ft-right {
+    grid-template-columns: 178px 1fr;
+    gap: 32px;
+}
+
+.ft-right .heading {
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 110.00000000000001%;
+    color: #FFFFFF;
+}
+
+.ft-right ul li a {
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FFFFFF;
+    text-decoration: none
+}
+.ft-right ul li a img{
+    width: 24px;
+    height: 24px;
+}
