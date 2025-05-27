@@ -14,6 +14,10 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+.grad-bg {
+    background: radial-gradient(33.31% 61.69% at 49.4% 51.91%, #2D2D2D 0%, #1C1C1C 75.97%);
+}
+
 .editor {
     font-family: "EditorsNote";
 }
@@ -411,6 +415,68 @@ body {
     color: #FFFFFF;
 }
 
+
+.wk-bottom .wk-box {
+    padding: 25px 20px;
+    border-radius: 20px;
+    color: #1C1C1CCC;
+    height: 403px;
+}
+
+.wk-bottom .wk-box:last-child .wk-cost-inner .disc {
+    color: #FFFFFF !important;
+}
+
+.wk-bottom .wk-box .servic-list {
+    padding: 26px 20px;
+    border-radius: 20px;
+}
+
+.wk-bottom .wk-box .rotate {
+    transform: rotate(-2deg);
+}
+
+.wk-bottom .wk-box .servic-list h2 {
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 110.00000000000001%;
+    color: #FFFFFF;
+}
+
+.wk-bottom .wk-box .servic-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FFFFFFB2;
+}
+
+.wk-bottom .wk-box .servic-list li img {
+    width: 24px;
+    height: 24px;
+}
+
+.wk-bottom .wk-box .img-box {
+    width: 100px;
+    height: 100px;
+    background-color: #95BF47;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 19px auto;
+}
+
+.wk-bottom .wk-box .img-box img {
+    width: 40px;
+    height: 40px;
+}
+
+
 .ex-bottom .grad {
     background: linear-gradient(90deg, #95BF47 0%, #9FBB6B 100%);
 }
@@ -514,13 +580,19 @@ body {
 }
 
 
-.pr-bottom .pr-box {
+.pr-bottom .pr-box,
+.wk-bottom .wk-box {
     padding: 25px 20px;
     border-radius: 20px;
     color: #1C1C1CCC;
+    height: max-content;
+    transition: color .4s ease-in;
 }
 
-.pr-bottom .pr-box .pr-title {
+
+
+.pr-bottom .pr-box .pr-title,
+.wk-bottom .wk-box .wk-title {
     padding: 4px 14px;
     width: fit-content;
     border-radius: 100px;
@@ -529,20 +601,63 @@ body {
     font-size: 16px;
     line-height: 150%;
 }
-.pr-bottom .pr-box .pr-cost-inner .price{
+
+
+.pr-bottom .pr-box .pr-cost-inner .price,
+.wk-bottom .wk-box .wk-cost-inner .after-title {
     font-family: Plus Jakarta Sans;
     font-weight: 600;
     font-size: 32px;
     line-height: 110.00000000000001%;
 }
-.pr-bottom .pr-box .pr-cost-inner .disc{
-    font-size: 16px;
+
+.pr-bottom .pr-box .pr-cost-inner .disc,
+.wk-bottom .wk-box .wk-cost-inner .disc {
+    font-size: 16px !important;
 }
+
 .pr-bottom .pr-box .saperate-bd {
-    border-top: 1px dashed #1C1C1C33
+    width: 100%;
 }
 
+.pr-bottom .pr-box .saperate-bd img {
+    width: 100%;
+    height: 1px;
+}
 
+.pr-bottom .pr-box .servic-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #1C1C1CCC;
+}
+
+.pr-bottom .pr-box .servic-list li img {
+    width: 24px;
+    height: 24px;
+}
+
+.pr-bottom .pr-box .figma-ic-bottom {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.pr-bottom .pr-box .figma-ic-bottom img {
+    width: 28px;
+    height: 28px;
+}
+
+.pr-bottom .pr-box .figma-ic-bottom span {
+    color: #1C1C1CCC;
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
 
 .swiper {
     width: 100%;
