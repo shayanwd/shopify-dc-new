@@ -165,6 +165,14 @@ body {
     line-height: 90.01%;
     color: #95BF47;
     text-decoration: underline;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.serv-btn:hover {
+    color: #7a9f39;
+    gap: 15px;
+    transform: translateX(5px);
 }
 
 .serv-platform {
@@ -247,15 +255,19 @@ body {
     background-repeat: no-repeat;
 }
 
+header .fr-button {
+    height: 100%;
+}
+
 .fr-button {
     width: 100%;
     display: flex;
     align-items: center;
     gap: 10px;
     justify-content: center;
-    padding: 20px 0;
+    padding: 20px 10px;
     background: linear-gradient(90deg, #567BFF 0%, #8EA7FF 100%);
-    border: 3px solid #FFFFFF33;
+
     box-shadow: 0px 7px 24px 0px #8EA7FF73;
     border-radius: 20px;
     font-family: Plus Jakarta Sans;
@@ -264,13 +276,27 @@ body {
     line-height: 90%;
     color: #FFFFFF;
     position: relative;
+    transition: all 0.3s ease;
 }
 
+.fr-button:hover {
+    background: linear-gradient(90deg, #8EA7FF 0%, #567BFF 100%);
+    transform: translateY(-3px);
+}
+
+.fr-button:active {
+    transform: translateY(0);
+}
 
 .fr-button img {
     width: 100%;
     max-width: 32px;
     height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.fr-button:hover img {
+    transform: rotate(10deg);
 }
 
 .hr-right .bot-txt ul {
@@ -473,10 +499,15 @@ body {
 .wk-bottom .wk-box .servic-list {
     padding: 26px 20px;
     border-radius: 20px;
+    transition: 0.3s;
+    transition-delay: 0.2s;
 }
 
-.wk-bottom .wk-box .rotate {
+
+
+.wk-box:hover .servic-list {
     transform: rotate(-2deg);
+    transition-delay: 0s;
 }
 
 .wk-bottom .wk-box .servic-list h2 {
@@ -512,6 +543,7 @@ body {
     justify-content: center;
     border-radius: 50%;
     margin: 19px auto;
+    overflow: hidden;
 }
 
 .wk-bottom .wk-box .img-box img {
@@ -837,7 +869,7 @@ footer {
 .ft-left form button {
     width: fit-content;
     padding: 20px 40px;
-    border: 3px solid #FFFFFF33;
+
     box-shadow: 0px 7px 24px 0px #8EA7FF73;
 }
 
@@ -887,34 +919,39 @@ footer {
 
 
 @media (max-width: 1220px) {
-    .top-bar li a span{
+    .top-bar li a span {
         font-size: 14px;
     }
+
     .sec-title {
         font-size: 54px;
     }
-    
+
     .sec-title .editor {
         font-size: 74px;
     }
-    
+
     .disc {
         font-size: 18px;
     }
-    
+
     .about-bottom .for-pr-ex .ex-box h2 {
         font-size: 52px;
     }
-    
+
     .about-bottom .for-pr-ex .ex-box span {
         font-size: 14px;
     }
-    
-    .pr-top .sec-title span, .tst-top .sec-title span, .ex-top .sec-title span, .wk-top .sec-title span {
+
+    .pr-top .sec-title span,
+    .tst-top .sec-title span,
+    .ex-top .sec-title span,
+    .wk-top .sec-title span {
         font-size: 54px;
     }
-    
-    .pr-bottom .pr-box .pr-cost-inner .price, .wk-bottom .wk-box .wk-cost-inner .after-title {
+
+    .pr-bottom .pr-box .pr-cost-inner .price,
+    .wk-bottom .wk-box .wk-cost-inner .after-title {
         font-size: 30px;
-    }    
+    }
 }
