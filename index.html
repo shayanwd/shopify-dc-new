@@ -1103,7 +1103,8 @@
 <script src="assets/js/custom.js"></script>
 
 <script>
-    const formmmmm = document.getElementById('contactForm');
+
+    const formmmmm = document.getElementById('contactForm')
     if (formmmmm) {
         formmmmm.addEventListener('submit', function (event) {
             event.preventDefault();
@@ -1129,7 +1130,7 @@
             };
 
             // Send the form data
-            fetch('http://shopifydeveloperscompany.com/rest/contact-form.php', {
+            fetch('/rest/contact-form.php', {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",
@@ -1222,30 +1223,23 @@
             });
         }
 
-        function showMessage(type) {
-            // type: 'submitSuccessMessage' or 'submitErrorMessage'
-            let message = '';
-            let toastClass = '';
-            let icon = '';
-            if (type === 'submitSuccessMessage') {
-                message = 'Thank you! Your message has been sent successfully.';
-                toastClass = 'toast-success';
-                icon = '✅';
-            } else {
-                message = 'Sorry, there was an error sending your message. Please try again later.';
-                toastClass = 'toast-error';
-                icon = '❌';
-            }
-            const toastContainer = document.getElementById('toast-container');
-            const toast = document.createElement('div');
-            toast.className = `toast-message ${toastClass}`;
-            toast.innerHTML = `<span class='toast-icon'>${icon}</span> ${message}`;
-            toastContainer.appendChild(toast);
-            // Remove after animation
+        function showMessage(elementId) {
+            // Hide both messages first
+            document.getElementById('submitSuccessMessage').classList.add('d-none');
+            document.getElementById('submitErrorMessage').classList.add('d-none');
+
+            // Show the requested message
+            document.getElementById(elementId).classList.remove('d-none');
+
+            // Scroll message into view
+            document.getElementById(elementId).scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Hide message after 5 seconds
             setTimeout(() => {
-                toast.remove();
+                document.getElementById(elementId).classList.add('d-none');
             }, 5000);
         }
+
     }
 </script>
 
