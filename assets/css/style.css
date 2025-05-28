@@ -58,6 +58,49 @@ body {
     color: #1C1C1C;
 }
 
+.mn-header ul li a {
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 110.00000000000001%;
+    color: #FFFFFF;
+    transition: color .3s ease-in;
+}
+
+.mn-header ul li a:hover {
+    color: #95BF47;
+}
+
+.mn-header ul li a img {
+    width: 20px;
+    height: 20px;
+}
+
+.mn-header ul li a.active {
+    color: #95BF47;
+    position: relative;
+}
+
+.mn-header ul li a.active::after {
+    background-color: currentColor;
+    border-radius: 50%;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 5px;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 0;
+    top: 130%;
+    transform: scale(1) translateZ(1);
+    transform-origin: center;
+    transition: transform .3s cubic-bezier(.32, .94, .6, 1);
+    width: 5px;
+    pointer-events: none;
+}
+
 .hero-sec .hr-left {
     width: 100%;
     max-width: 614px;
