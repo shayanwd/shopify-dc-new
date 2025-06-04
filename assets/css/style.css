@@ -41,6 +41,7 @@ body {
     max-width: 1215px;
     margin: 0 auto;
     padding: 0 15px;
+    text-align: center;
 }
 
 
@@ -154,7 +155,9 @@ body {
     line-height: 130%;
     color: #5A5A5A;
 }
-
+.disc span{
+    font-weight: 600;
+}
 .serv-btn {
     display: flex;
     align-items: center;
@@ -192,7 +195,7 @@ body {
     max-width: 600px;
 }
 
-.hr-right form {
+.sec-form form {
     width: 100%;
     border-radius: 16px;
     padding: 32px;
@@ -200,7 +203,7 @@ body {
     background-color: #FFFFFF;
 }
 
-.hr-right form::before {
+.sec-form form::before {
     content: '';
     position: absolute;
     top: -1px;
@@ -212,7 +215,7 @@ body {
     z-index: -1;
 }
 
-.hr-right form h1 {
+.sec-form form h1 {
     font-family: Plus Jakarta Sans;
     font-weight: 600;
     font-size: 24px;
@@ -220,20 +223,20 @@ body {
     color: #1C1C1C;
 }
 
-.hr-right form .field-row {
+.sec-form form .field-row {
     display: flex;
     justify-content: space-between;
     gap: 8px;
     margin-bottom: 8px;
 }
 
-.hr-right form .field-row .field-column {
+.sec-form form .field-row .field-column {
     width: 100%;
 }
 
-.hr-right form .field-row .field-column input,
-.hr-right form .field-row .field-column select,
-.hr-right form .field-row .field-column textarea {
+.sec-form form .field-row .field-column input,
+.sec-form form .field-row .field-column select,
+.sec-form form .field-row .field-column textarea {
     padding: 12px;
     background-color: #FFFFFF;
     box-shadow: 0px 2px 3px 0px #0000000F;
@@ -249,7 +252,7 @@ body {
     outline: none !important;
 }
 
-.hr-right form .field-row .field-column select {
+.sec-form form .field-row .field-column select {
     appearance: none;
     background-image: url("../images/icons/arrow-down-01.webp");
     background-position: right 12px center;
@@ -656,6 +659,9 @@ header .fr-button {
     padding: 20px 64px;
 }
 
+.appoint-inner {
+    margin: 0 auto;
+}
 
 .pr-bottom .pr-box,
 .wk-bottom .wk-box {
@@ -1158,6 +1164,164 @@ label {
 .floating-whatsapp:hover .whatsapp-tooltip {
     opacity: 1;
     visibility: visible;
+}
+
+
+
+
+/* Policy-Page */
+.policy-sec {
+    width: 100%;
+    padding: 110px 0 0;
+}
+
+.publish-dt h6 {
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: #000000;
+}
+
+.publish-dt h6 .editor {
+    color: #95BF47;
+}
+
+.policy-sec .pr-top p.disc {
+    font-size: 20px !important;
+}
+
+.policy-sec .cntn .policy-heading {
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+    color: #000000;
+    text-align: left;
+}
+
+.policy-sec .disc-cntn ul li,
+.policy-sec .disc-cntn ul li a {
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: #000000;
+    text-align: left;
+}
+
+.policy-sec .disc-cntn ul li img,
+.policy-sec .disc-cntn ul li a img {
+    width: 24px;
+    height: 24px;
+    transform: translateY(4px);
+}
+
+.disc-cntn p.disc {
+    color: #000000;
+}
+
+
+
+/* FAQs-Page */
+.faqs-sec {
+    width: 100%;
+    padding: 120px 0 0;
+}
+
+
+
+.accordion-item {
+    margin-bottom: 32px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px 0px #10101014;
+    overflow: hidden;
+}
+
+.accordion:last-child .accordion-item {
+    margin-bottom: 0 !important;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 16px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+.accordion-header .left {
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 90%;
+    color: #000000;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.accordion-header .left img {
+    width: 52px;
+    height: 52px;
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 16px;
+    background: #fff;
+    transition: max-height 0.8s ease, padding 0.8s ease;
+}
+
+
+.accordion-body.open {
+    padding: 8px 16px 16px 16px;
+    max-height: max-content !important;
+}
+
+.arrow {
+    transition: transform 0.8s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion-header.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* Get in touch  */
+
+.get-in-touch-sec{
+    width: 100%;
+    padding: 150px 0 0;
+}
+
+.bottom-form-holder{
+    display: grid;
+    grid-template-columns: 1fr 460px;
+}
+
+.bottom-form-holder form {
+    border-radius: 20px 0 0 20px;
+}
+
+.bottom-form-holder form::before {
+    display: none;
+}
+
+
+.bottom-form-holder form .field-row .field-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media (max-width: 768px) {
