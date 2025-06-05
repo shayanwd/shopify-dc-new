@@ -1213,9 +1213,11 @@ label {
     color: #000000;
     text-align: left;
 }
+
 .policy-sec .disc-cntn ul li a {
     word-break: break-all;
 }
+
 .policy-sec .disc-cntn ul li img,
 .policy-sec .disc-cntn ul li a img {
     width: 24px;
@@ -1458,6 +1460,23 @@ label {
     .policy-sec .disc-cntn ul li a {
         font-size: 18px;
     }
+
+    .pr-top .sec-title span,
+    .tst-top .sec-title span,
+    .ex-top .sec-title span,
+    .wk-top .sec-title span {
+        font-size: 40px;
+    }
+
+    .accordion-header .left img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .accordion-header .left {
+        font-size: 18px;
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -1481,10 +1500,27 @@ label {
         font-size: 18px;
     }
 
-    .disc {
-        font-size: 18px;
+    .pr-top .sec-title span,
+    .tst-top .sec-title span,
+    .ex-top .sec-title span,
+    .wk-top .sec-title span {
+        font-size: 40px;
     }
 
+    .accordion-header .left {
+        font-size: 17px;
+        text-align: left;
+        gap: 8px;
+    }
+
+    .arrow svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .accordion-header {
+        gap: 20px;
+    }
 }
 
 @media (max-width: 424px) {
@@ -1513,5 +1549,31 @@ label {
     .policy-sec .disc-cntn ul li a img {
         width: 18px;
         height: 18px;
+    }
+
+    .pr-top .sec-title span,
+    .tst-top .sec-title span,
+    .ex-top .sec-title span,
+    .wk-top .sec-title span {
+        font-size: 36px;
+    }
+
+    .accordion-header .left img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .accordion-header .left {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .accordion-body .disc {
+        font-size: 14px;
     }
 }
