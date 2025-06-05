@@ -155,9 +155,11 @@ body {
     line-height: 130%;
     color: #5A5A5A;
 }
-.disc span{
+
+.disc span {
     font-weight: 600;
 }
+
 .serv-btn {
     display: flex;
     align-items: center;
@@ -1210,7 +1212,9 @@ label {
     color: #000000;
     text-align: left;
 }
-
+.policy-sec .disc-cntn ul li a {
+    word-break: break-all;
+}
 .policy-sec .disc-cntn ul li img,
 .policy-sec .disc-cntn ul li a img {
     width: 24px;
@@ -1299,12 +1303,12 @@ label {
 
 /* Get in touch  */
 
-.get-in-touch-sec{
+.get-in-touch-sec {
     width: 100%;
     padding: 150px 0 0;
 }
 
-.bottom-form-holder{
+.bottom-form-holder {
     display: grid;
     grid-template-columns: 1fr 460px;
 }
@@ -1322,6 +1326,61 @@ label {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.bottom-form-holder form .field-row {
+    margin-bottom: 24px;
+}
+
+.bottom-form-holder .right-info {
+    background: linear-gradient(168.96deg, #567BFF 2.57%, #8EA7FF 96.18%);
+    border: 3px solid #FFFFFF33;
+    border-right: none !important;
+    padding: 50px 30px !important;
+    border-radius: 0 20px 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.bottom-form-holder .right-info:before {
+    content: '';
+    background-image: url('../images/right-info-bg-img.webp');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    position: absolute;
+    bottom: -38px;
+    left: 0;
+    width: 100%;
+    height: 357px;
+}
+
+.bottom-form-holder .right-info h3 {
+    color: #fff;
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: left;
+    letter-spacing: -4%;
+}
+
+.bottom-form-holder .right-info ul li a {
+    width: max-content;
+    display: block;
+    padding: 14px 16px;
+    display: flex;
+    gap: 8px;
+    border: 3px solid #1616161F;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+}
+
+.bottom-form-holder .right-info ul li a span {
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 110.00000000000001%;
+    color: #161616;
 }
 
 @media (max-width: 768px) {
@@ -1378,5 +1437,80 @@ label {
     .pr-bottom .pr-box .pr-cost-inner .price,
     .wk-bottom .wk-box .wk-cost-inner .after-title {
         font-size: 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .sec-title {
+        font-size: 45px;
+    }
+
+    .policy-sec .pr-top p.disc {
+        font-size: 18px !important;
+    }
+
+    .policy-sec .cntn .policy-heading {
+        font-size: 30px;
+    }
+
+    .policy-sec .disc-cntn ul li,
+    .policy-sec .disc-cntn ul li a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sec-title {
+        font-size: 40px;
+    }
+
+    .publish-dt h6 {
+        font-size: 16px;
+    }
+
+    .policy-sec .pr-top p.disc {
+        font-size: 16px !important;
+    }
+
+    .policy-sec .cntn .policy-heading {
+        font-size: 26px;
+    }
+
+    .disc {
+        font-size: 18px;
+    }
+
+    .disc {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 424px) {
+    .sec-title {
+        font-size: 36px;
+    }
+
+    .publish-dt h6 {
+        font-size: 14px;
+    }
+
+    .policy-sec .cntn .policy-heading {
+        font-size: 22px;
+    }
+
+    .disc {
+        font-size: 16px;
+    }
+
+    .policy-sec .disc-cntn ul li,
+    .policy-sec .disc-cntn ul li a {
+        font-size: 16px;
+    }
+
+    .policy-sec .disc-cntn ul li img,
+    .policy-sec .disc-cntn ul li a img {
+        width: 18px;
+        height: 18px;
     }
 }
