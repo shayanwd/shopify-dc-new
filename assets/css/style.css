@@ -13,7 +13,9 @@ body {
     background-color: #f5f5f5;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
-
+.jk{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
 .grad-bg {
     background: radial-gradient(33.31% 61.69% at 49.4% 51.91%, #2D2D2D 0%, #1C1C1C 75.97%);
 }
@@ -1384,6 +1386,155 @@ label {
     font-size: 16px;
     line-height: 110.00000000000001%;
     color: #161616;
+}
+
+.c-ico {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.c-ico::after {
+    content: "";
+    background-image: url(../images/icons/singapore.svg);
+    width: 40px;
+    height: 40px;
+    display: block;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: -12px;
+}
+
+.abt-hero .hr-left {
+    max-width: 660px;
+}
+
+.abt-hero .sec-title .editor {
+    font-size: 80px;
+} 
+
+.mq-parent {
+    width: 1400px;
+    max-width: calc(100% - 30px);
+    margin: auto;
+    position: relative;
+    --spc: 130px;
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 2%, #FFFFFF 50%, rgba(255, 255, 255, 0) 98%);
+}
+
+.mq-parent .mq-inner {
+    display: flex;
+    flex: 1;
+    white-space: nowrap;
+    animation: moove 15s linear infinite ;
+}
+
+.mq-inner .trust-ico {
+    display: block;
+    padding-right: var(--spc);
+    height: 50px !important;
+    object-fit: contain;
+} 
+
+@keyframes moove{
+    from{
+        transform: translateX(0%);
+    }
+    
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+.vm-sec::before {
+    content: '';
+    position: absolute;
+    width: 30%;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    background-image: url('../images/vs-b.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    aspect-ratio: 530/923;
+    height: max-content;
+    margin: auto;
+}
+
+.vm-sec::after {
+    content: '';
+    position: absolute;
+    height: max-content;
+    right: 0;
+    width: 30%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url('../images/vs-a.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    z-index: 0;
+    aspect-ratio: 547/961;
+}
+
+.count-strip-sec {
+    width: 100%;
+    padding: 60px 0px;
+    background-image: url(../images/strip_converted.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.shade {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.shade::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 438/962;
+    width: 20%;
+    max-width: 388px;
+    background-image: url(../images/sd-b.webp);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+    z-index: -1;
+}
+
+.shade::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    aspect-ratio: 438 / 962;
+    width: 20%;
+    max-width: 378px;
+    background-image: url(../images/sd-a.webp);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    z-index: -1;
+}
+
+.shade-over{
+overflow: visible;
+}
+
+.shade-over::after{
+    transform: translateY(50%);
 }
 
 @media (max-width: 768px) {
