@@ -13,9 +13,11 @@ body {
     background-color: #f5f5f5;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
-.jk{
+
+.jk {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
+
 .grad-bg {
     background: radial-gradient(33.31% 61.69% at 49.4% 51.91%, #2D2D2D 0%, #1C1C1C 75.97%);
 }
@@ -40,10 +42,9 @@ body {
 
 .my-container {
     width: 100%;
-    max-width: 1215px;
+    max-width: 1235px;
     margin: 0 auto;
-    padding: 0 15px;
-    text-align: center;
+    padding: 0 15px; 
 }
 
 
@@ -356,6 +357,7 @@ header .fr-button {
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 111;
+    animation: float 8s ease-in-out infinite;
 }
 
 .about-sec::after {
@@ -369,6 +371,7 @@ header .fr-button {
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 111;
+    animation: float 8s ease-in-out reverse infinite;
 }
 
 .bf-title {
@@ -747,6 +750,22 @@ header .fr-button {
     line-height: 150%;
 }
 
+.pr-bottom .pr-box:nth-child(2) {
+    background: radial-gradient(33.31% 61.69% at 49.4% 51.91%, #2D2D2D 0%, #1C1C1C 75.97%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+
+.pr-bottom .pr-box:nth-child(2) * {
+    color: #fff !important;
+}
+
+.pr-bottom .pr-box:nth-child(2) .saperate-bd img {
+    filter: invert(1);
+}
+
+.pr-bottom .pr-box:nth-child(2) .pr-title {
+    background: #95BF47;
+}
+
 .swiper {
     width: 100%;
     height: 100%;
@@ -755,10 +774,10 @@ header .fr-button {
 
 .rev-box {
     width: 381px;
+    max-width: calc(100% - 30px);
     height: 384px;
     border-radius: 20px;
     padding: 25px 20px;
-    pointer-events: none;
 }
 
 .rev-box .auth-img {
@@ -1189,7 +1208,7 @@ label {
     color: #000000;
 }
 
-.publish-dt h6 .editor {
+.publish-dt h6 .italic {
     color: #95BF47;
 }
 
@@ -1246,7 +1265,13 @@ label {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0px 2px 4px 0px #10101014;
-    overflow: hidden;
+    display: grid;
+    grid-template-rows: max-content 0px;
+    transition: all 0.8s ease;
+}
+
+.accordion-item:has(.accordion-body.open) {
+    grid-template-rows: max-content 1fr;
 }
 
 .accordion:last-child .accordion-item {
@@ -1282,17 +1307,16 @@ label {
 }
 
 .accordion-body {
-    max-height: 0;
     overflow: hidden;
     padding: 0 16px;
     background: #fff;
     transition: max-height 0.8s ease, padding 0.8s ease;
+    max-height: initial !important;
 }
 
 
 .accordion-body.open {
     padding: 8px 16px 16px 16px;
-    max-height: max-content !important;
 }
 
 .arrow {
@@ -1330,7 +1354,7 @@ label {
 .bottom-form-holder form .field-row .field-column {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 }
 
 .bottom-form-holder form .field-row {
@@ -1413,7 +1437,7 @@ label {
 
 .abt-hero .sec-title .editor {
     font-size: 80px;
-} 
+}
 
 .mq-parent {
     width: 1400px;
@@ -1431,7 +1455,7 @@ label {
     display: flex;
     flex: 1;
     white-space: nowrap;
-    animation: moove 15s linear infinite ;
+    animation: moove 15s linear infinite;
 }
 
 .mq-inner .trust-ico {
@@ -1439,18 +1463,31 @@ label {
     padding-right: var(--spc);
     height: 50px !important;
     object-fit: contain;
-} 
+}
 
-@keyframes moove{
-    from{
+@keyframes moove {
+    from {
         transform: translateX(0%);
     }
-    
-    to{
+
+    to {
         transform: translateX(-100%);
     }
 }
 
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
 
 .vm-sec::before {
     content: '';
@@ -1466,6 +1503,7 @@ label {
     aspect-ratio: 530/923;
     height: max-content;
     margin: auto;
+    animation: float 8s ease-in-out infinite;
 }
 
 .vm-sec::after {
@@ -1483,6 +1521,7 @@ label {
     background-position: right;
     z-index: 0;
     aspect-ratio: 547/961;
+    animation: float 8s ease-in-out reverse infinite;
 }
 
 .count-strip-sec {
@@ -1493,6 +1532,7 @@ label {
     background-position: center;
     background-size: cover;
 }
+
 .shade {
     position: relative;
     z-index: 1;
@@ -1512,6 +1552,7 @@ label {
     background-position: top left;
     background-size: contain;
     z-index: -1;
+    animation: float 8s ease-in-out infinite;
 }
 
 .shade::after {
@@ -1527,15 +1568,130 @@ label {
     background-position: bottom right;
     background-size: contain;
     z-index: -1;
+    animation: float 8s ease-in-out reverse infinite;
 }
 
-.shade-over{
-overflow: visible;
+.shade-over {
+    overflow: visible;
 }
 
-.shade-over::after{
-    transform: translateY(50%);
+.shade-over::after {
+    bottom: -40%;
 }
+
+.wcu-flexed .wcu-card {
+    flex-grow: 1;
+    max-width: calc(100% / 3 - 20px);
+}
+
+
+
+
+.fw-cell {
+    position: relative;
+    z-index: 1;
+    aspect-ratio: 585/424;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.fw-cell .fwc-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.fw-cell .fwc-bg img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.fw-cell.fw-first {
+    border: 3px solid hsl(0deg 0% 0% / 6%);
+}
+
+.fwc-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 19px;
+}
+
+.fw-first .fwc-content {
+    padding: 24px;
+}
+
+.fwc-bottom {
+    margin-top: auto;
+}
+
+.fwc-bottom h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 140%;
+    letter-spacing: -0.3px;
+    margin-bottom: 12px;
+}
+
+.fwc-bottom ul {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.fwc-bottom ul li {
+    width: fit-content;
+    padding: 10px 16px;
+    border: 1px solid hsl(0deg 0% 100% / 20%);
+    background: hsl(0deg 0% 0% / 10%);
+    color: #ffffff;
+    border-radius: 30px;
+    backdrop-filter: blur(42px);
+    font-family: "EditorsNote";
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.sec-title.st-service {
+    letter-spacing: -3px;
+    width: 120%;
+}
+
+.sec-title.st-service .editor {
+    font-size: inherit !important;
+}
+
+.service-hero .disc {
+    letter-spacing: -0.8px;
+}
+
+.hero-ctas {
+    width: 100%;
+    display: flex;
+    max-width: 591px;
+    gap: 20px;
+}
+
+.hero-ctas .fr-button:nth-child(2) {
+    background: #2C2C2C;
+    font-size: 16px;
+}
+ 
+
 
 @media (max-width: 768px) {
     .floating-whatsapp {
