@@ -358,6 +358,7 @@ header .fr-button {
     background-size: contain;
     z-index: 111;
     animation: float 8s ease-in-out infinite;
+    pointer-events: none;
 }
 
 .about-sec::after {
@@ -372,6 +373,7 @@ header .fr-button {
     background-size: contain;
     z-index: 111;
     animation: float 8s ease-in-out reverse infinite;
+    pointer-events: none;
 }
 
 .bf-title {
@@ -775,7 +777,7 @@ header .fr-button {
 .rev-box {
     width: 381px;
     max-width: calc(100% - 30px);
-    height: 384px;
+    height: auto;
     border-radius: 20px;
     padding: 25px 20px;
 }
@@ -784,6 +786,8 @@ header .fr-button {
     width: 100%;
     max-width: 60px;
     height: 60px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
 }
 
 .rev-box .auth-name {
@@ -927,7 +931,8 @@ footer {
     font-size: 16px;
     line-height: 100%;
     color: #FFFFFF;
-    text-decoration: none
+    text-decoration: none;
+    word-break: break-word;
 }
 
 .ft-right ul li a img {
@@ -1717,6 +1722,18 @@ label {
         font-size: 14px;
     }
 
+    .top-bar .right ul {
+        gap: 10px;
+    }
+
+    .top-bar .right li a span {
+        display: none;
+    }
+
+    .ft-right .heading {
+        font-size: 26px;
+    }
+
     .sec-title {
         font-size: 54px;
     }
@@ -1750,8 +1767,9 @@ label {
     }
 }
 
-@media (max-width: 900px) {
-    .sec-title {
+@media (max-width: 1024px) {
+    .sec-title,
+    .sec-title .editor {
         font-size: 45px;
     }
 
@@ -1783,6 +1801,188 @@ label {
     .accordion-header .left {
         font-size: 18px;
     }
+
+
+
+
+
+
+
+.hero-sec {
+    padding: 80px 0px;
+}
+
+.hr-inner {
+    gap: 40px;
+}
+
+.c-ico::after {
+    width: 35px;
+    height: 35px;
+}
+
+.disc {
+    font-size: 16px;
+}
+
+.serv-platform img {
+    max-width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.sec-form form {
+    padding: 20px;
+}
+
+.bot-txt {
+    margin-top: 20px;
+}
+
+.about-sec, .expert-sec, .work-sec {
+    padding: 80px 0px;
+}
+
+.ex-bottom .serv-box .left-img {
+    max-width: 184px;
+    height: auto;
+    object-fit: contain;
+    display: none;
+}
+
+.ex-bottom .serv-box a {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.ex-bottom .serv-box a span{
+    text-decoration: none;
+}
+
+.ex-bottom .serv-box {
+    width: 50%;
+}
+
+.ex-bottom .serv-box .right-cntn {
+    width: 100%;
+}
+
+.ex-bottom .serv-title {
+    font-size: 28px;
+    line-height: 110.00000000000001%;
+}
+
+.wk-bottom {
+    gap: 20px;
+}
+
+.wk-bottom .wk-box .servic-list h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.wk-bottom .wk-box .servic-list li {
+    align-items: flex-start;
+    font-size: 14px;
+}
+
+.wk-bottom .wk-box .servic-list li img {
+    width: 20px;
+    height: 20px;
+}
+
+.pr-bottom .pr-box .pr-title, .wk-bottom .wk-box .wk-title {
+    font-size: 14px;
+}
+
+.pr-bottom .pr-box .pr-cost-inner .price, .wk-bottom .wk-box .wk-cost-inner .after-title {
+    font-size: 24px;
+}
+
+.pr-bottom .pr-box .pr-cost-inner .disc, .wk-bottom .wk-box .wk-cost-inner .disc {
+    font-size: 14px !important;
+}
+
+.appoint-sec {
+    padding: 90px 0px;
+}
+
+.appoint-inner {
+    max-width: 710px;
+}
+
+.pricing-sec {
+    padding: 80px 0px;
+}
+
+.pr-bottom .pr-box, .wk-bottom .wk-box {
+    padding: 20px;
+}
+
+.pr-bottom .pr-box .pr-title, .wk-bottom .wk-box .wk-title {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.pr-box .fr-button {
+    font-size: 14px;
+    line-height: 120%;
+}
+
+.pr-box .fr-button img {
+    max-width: 24px;
+    height: 24px;
+}
+
+.servic-list {
+    gap: 4px;
+}
+
+.pr-bottom .pr-box .servic-list li {
+    align-items: flex-start;
+    font-size: 14px;
+}
+
+.pr-bottom .pr-box .servic-list li img {
+    width: 20px;
+    height: 20px;
+}
+
+.pr-bottom .pr-box .saperate-bd {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.pr-bottom .pr-box .figma-ic-bottom img {
+    width: 24px;
+    height: 24px;
+}
+
+.pr-bottom .pr-box .figma-ic-bottom span {
+    font-size: 14px;
+    line-height: 130%;
+}
+
+.testimonials-sec {
+    padding: 80px 0px;
+}
+
+.rev-box {
+    height: auto;
+}
+
+.subs-sec {
+    padding-top: 60px;
+}
+
+.footer-top {
+    grid-template-columns: 100%;
+    gap: 80px;
+}
+
+.footer-top .ft-left {
+    max-width: 530px;
+}
 
 }
 
@@ -1827,6 +2027,146 @@ label {
 
     .accordion-header {
         gap: 20px;
+    }
+
+
+
+
+
+
+
+
+
+    .header-inner .right-cta {
+        display: none;
+    }
+    
+    .about-bottom .for-pr-ex {
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 10px;
+    }
+    
+    .about-top .sec-title span {
+        font-size: inherit;
+    }
+    
+    .about-bottom .for-pr-ex .ex-box h2 {
+        font-size: 46px;
+    }
+    
+    .about-bottom .for-pr-ex .ex-box span {
+        font-size: 12px;
+    }
+    
+    .hero-sec {
+        padding: 60px 0px;
+    }
+    
+    .hr-inner {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .about-sec, .expert-sec, .work-sec {
+        padding: 60px 0px;
+    }
+    
+    .hero-sec .sec-title {
+        font-size: 46px;
+    }
+    
+    .expert-sec .sec-title {
+        width: 100%;
+    }
+    
+    .ex-bottom .serv-title {
+        font-size: 24px;
+    }
+    
+    .ex-bottom .serv-disc {
+        font-size: 14px;
+    }
+    
+    .ex-bottom .serv-box a {
+        font-size: 12px;
+    }
+    
+    .wk-bottom {
+        flex-wrap: wrap;
+        gap: 40px 20px;
+        justify-content: center;
+    }
+    
+    .pr-bottom .pr-box, .wk-bottom .wk-box {
+        flex: 1;
+        max-width: 50%;
+    }
+    
+    .appoint-sec {
+        padding: 70px 0px;
+    }
+    
+    .pricing-sec {
+        padding: 60px 0px;
+    }
+    
+    .pr-bottom {
+        flex-wrap: wrap;
+        gap: 40px 20px;
+        justify-content: center;
+    }
+    
+    .pr-bottom .pr-box {
+        flex: 1;
+        max-width: 50%;
+        width: 100%;
+        flex-basis: 40%;
+    }
+    
+    .testimonials-sec {
+        padding: 60px 0px;
+    }
+    
+    header.sticky {
+        padding: 15px;
+        padding-bottom: 0px;
+    }
+    
+    footer.w-full {
+        padding-top: 280px;
+    }
+    
+    .ft-right {
+        grid-template-columns: 160px 1fr;
+    }
+    
+    .ft-right .heading {
+        font-size: 24px;
+    }
+    
+    .footer-top {
+        padding-bottom: 40px;
+        gap: 60px;
+    }
+    
+    .footer-bottom {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .mn-header {
+        padding: 20px;
+    }
+    .footer-top {
+        grid-template-columns: 100%;
+    }
+    .top-bar .left {
+        display: none;
+    }
+    
+    .top-bar  .right {
+        width: 100%;
     }
 }
 
@@ -1882,5 +2222,124 @@ label {
 
     .accordion-body .disc {
         font-size: 14px;
+    }
+
+
+
+
+    .top-bar {
+        padding: 15px;
+        padding-bottom: 0px;
+    }
+    
+    .mn-header {
+        border-radius: 12px;
+    }
+    
+    .mn-header .logo {
+        max-width: 160px;
+    }
+    
+    .hamburger-menu {
+        width: 25px;
+        height: 15px;
+    }
+    
+    .about-top p.disc {
+        font-size: 14px;
+    }
+    
+    .about-bottom .for-pr-ex {
+        margin-bottom: 40px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+    .about-bottom .for-pr-ex .ex-box h2 {
+        font-size: 36px;
+    }
+    
+    .about-bottom .for-pr-ex .ex-box span {
+        font-size: 10px;
+    }
+    
+    .btn-boxes {
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .work-direct span {
+        font-size: 16px;
+    }
+    
+    .ex-bottom > .flex {
+        flex-direction: column;
+    }
+    
+    .ex-bottom .serv-box {
+        width: 100%;
+    }
+    
+    .pr-bottom .pr-box, .wk-bottom .wk-box {
+        flex: 1;
+        max-width: 100%;
+        width: 100%;
+        flex-basis: 100%;
+    }
+    
+    .wk-box:nth-child(2) {
+        margin-top: -20px;
+    }
+    
+    .appoint-sec .sec-title {
+        font-size: 36px;
+    }
+    
+    .appoint-sec .sec-title .editor {
+        font-size: inherit;
+    }
+    
+    .subs-inner {
+        padding: 60px 20px;
+    }
+    
+    .subs-inner .sec-title {
+        font-size: 34px;
+    }
+    
+    .subs-inner .sec-title .editor {
+        font-size: inherit;
+    }
+    
+    .ft-right {
+        grid-template-columns: 100%;
+        gap: 40px;
+    }
+    
+    .ft-right .heading {
+        padding-bottom: 15px;
+    }
+    
+    .ft-right ul.flex {
+        gap: 10px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 6px;
+        align-items: stretch;
+    }
+    
+    .ft-right ul li a {
+        line-height: 130%;
+    }
+    
+    .footer-top .ft-left {
+        gap: 40px;
+    }
+    
+    .ft-left img.footer-logo {
+        max-width: 260px;
     }
 }

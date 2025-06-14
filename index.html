@@ -27,15 +27,215 @@
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <style>
+        /* Hamburger Menu Styles */
+        .hamburger-menu {
+            width: 30px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+            z-index: 100000;
+        }
+
+        .hamburger-menu span {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: #fff;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-menu span:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger-menu span:nth-child(2) {
+            top: 9px;
+        }
+
+        .hamburger-menu span:nth-child(3) {
+            top: 18px;
+        }
+
+        /* Active state for hamburger menu */
+        .hamburger-menu.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 9px;
+        }
+
+        .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 9px;
+        }
+
+        /* Desktop Navigation Styles */
+        .nav-menu {
+            display: block;
+        }
+
+        .nav-menu ul {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-menu .group ul {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 240px;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            padding: 0.5rem 0;
+            display: none;
+        }
+
+        .nav-menu .group:hover ul {
+            display: block;
+        }
+
+        .hide-resp {
+            display: none;
+        }
+
+        /* Mobile Menu Styles */
+        @media (min-width: 1200px) {
+            .hamburger-menu {
+                display: none !important;
+            }
+
+            .show-resp {
+                display: none;
+            }
+
+            .hide-resp {
+                display: block;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .hamburger-menu {
+                display: block !important;
+                width: 30px;
+                height: 20px;
+                position: relative;
+                cursor: pointer;
+                z-index: 100000;
+                background: transparent;
+                border: none;
+                padding: 0;
+            }
+
+            .hamburger-menu span {
+                display: block;
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                background: #fff;
+                border-radius: 2px;
+                transition: all 0.3s ease;
+            }
+
+            .hamburger-menu span:nth-child(1) {
+                top: 0;
+            }
+
+            .hamburger-menu span:nth-child(2) {
+                top: 9px;
+            }
+
+            .hamburger-menu span:nth-child(3) {
+                top: 18px;
+            }
+
+            .hamburger-menu.active span:nth-child(1) {
+                transform: rotate(45deg);
+                top: 9px;
+            }
+
+            .hamburger-menu.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger-menu.active span:nth-child(3) {
+                transform: rotate(-45deg);
+                top: 9px;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 300px;
+                height: 100%;
+                background: #161616;
+                transition: all 0.3s ease;
+                z-index: 99999;
+                padding-top: 80px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu ul {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .nav-menu .group ul {
+                position: static;
+                width: 100%;
+                background: transparent;
+                box-shadow: none;
+                padding: 0;
+                margin-top: 10px;
+                display: none;
+            }
+
+            .nav-menu .group ul.active {
+                display: block;
+            }
+
+            .nav-menu .group ul li a {
+                color: #fff !important;
+            }
+
+            .nav-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 99998;
+                display: none;
+            }
+
+            .nav-overlay.active {
+                display: block;
+            }
+        }
+    </style>
 
 </head>
 
 <body>
-    <div class="top-bar p-[20px] flex justify-between items-center">
+    <div class="top-bar p-[20px] flex justify-between items-center pb-[0px]">
         <div class="left">
             <ul>
                 <li>
-                    <a href="#" class="flex items-center gap-[8px]">
+                    <a href="https://maps.app.goo.gl/wtedNjwqbvGt9Gh89" class="flex items-center gap-[8px]">
                         <img src="/assets/images/icons/map-icon.svg" alt="">
                         <span>190 Woodlands bizhub, #07-17, Singapore 757516</span>
                     </a>
@@ -67,48 +267,74 @@
         </div>
     </div>
 
-    <header class="px-[20px] w-full">
+    <header class="px-[20px] pt-[20px] w-full sticky top-0 z-[99999]">
         <div class="header-inner flex gap-[10px]">
             <div
                 class="mn-header flex justify-between items-center bg-[#161616] px-[40px] py-[20px] rounded-[20px] w-full">
                 <div class="logo">
-                    <a href="#" class="w-fit block">
+                    <a href="/" class="w-fit block">
                         <img class="w-full block max-w-[200px] object-contain" src="assets/images/header-logo.svg"
                             alt="">
                     </a>
                 </div>
 
-                <ul class="flex items-center gap-[30px] justify-end xl:gap-[20px]">
-                    <li>
-                        <a href="#" class="active">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">About Us</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Previous Work</a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center gap-[4px]">
-                            <img src="assets/images/icons/menu-star.svg" alt="">
-                            Reviews
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center gap-[4px]">
-                            <img src="assets/images/icons/menu-phone.svg" alt="">
-                            Contact Us
-                        </a>
-                    </li>
-                </ul>
+                <!-- Hamburger Menu Button -->
+                <button class="hamburger-menu hidden xl:block" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <nav class="nav-menu">
+                    <ul class="flex items-center gap-[30px] justify-end">
+                        <li>
+                            <a href="/" class="active">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li class="relative group">
+                            <a href="/#services" class="flex items-center gap-[4px]">Services</a>
+                            <ul
+                                class="absolute left-0 top-[100%] w-48 bg-white shadow-lg rounded-lg py-2 hidden group-hover:block">
+                                <li><a href="migration.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Migration</a>
+                                </li>
+                                <li><a href="ux-web.html" class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">UX &
+                                        Web
+                                        Design</a></li>
+                                <li><a href="store-setup.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Store
+                                        Setup</a></li>
+                                <li><a href="shopify-development.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify
+                                        Development</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Previous Work</a>
+                        </li>
+                        <li>
+                            <a href="#reviews" class="flex items-center gap-[4px]">
+                                <img src="assets/images/icons/menu-star.svg" alt="">
+                                Reviews
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Contact-us.html" class="flex items-center gap-[4px]">
+                                <img src="assets/images/icons/menu-phone.svg" alt="">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <div class="right-cta">
-                <a href="#" class="fr-button px-[26px] w-max xl:text-[16px]">
+                <a href="Contact-us.html" class="fr-button !px-[26px] w-max text-[16px]">
                     <img src="assets/images/icons/btn-arrow.webp" alt="">
-                    Let's Discuss Project!
+                    <span class="hide-resp">Let's Discuss Project!</span>
+                    <span class="show-resp">Contact</span>
                 </a>
             </div>
         </div>
@@ -134,7 +360,7 @@
                         migrations, and performance-driven optimizations, all under one roof.
                     </p>
 
-                    <a href="#" class="serv-btn">
+                    <a href="#services" class="serv-btn">
                         <img src="assets/images/icons/serv-icon.svg" alt="">
                         See our Services
                     </a>
@@ -288,12 +514,12 @@
                 </div>
 
                 <div class="btn-boxes flex justify-center items-center gap-[30px]">
-                    <a href="#" class="fr-button">
+                    <a href="Contact-us.html" class="fr-button">
                         <img src="assets/images/icons/btn-arrow.webp" alt="">
                         Book a Free Consultion
                     </a>
 
-                    <a href="#" class="fr-button pr-btn">
+                    <a href="#services" class="fr-button pr-btn">
                         <img src="assets/images/icons/arrow-upward.webp" alt="">
                         See Our Previous Work
                     </a>
@@ -302,7 +528,7 @@
         </div>
     </section>
 
-    <section class="expert-sec py-[120px] w-full">
+    <section id="services" class="expert-sec py-[120px] w-full">
         <div class="my-container">
             <div class="ex-top mb-[60px] flex flex-col justify-center items-center">
                 <div class="work-direct flex justify-center items-center gap-[12px] mb-[12px]">
@@ -343,7 +569,8 @@
                                 responsive UX—boosting conversions and fostering lasting customer loyalty.
                             </p>
 
-                            <a href="#" class="inline-block transition-all duration-300 hover:text-[#007bff] group">
+                            <a href="ux-web.html"
+                                class="inline-block transition-all duration-300 hover:text-[#007bff] group">
                                 Hire us to design your future store
                                 <span
                                     class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -363,7 +590,8 @@
                             responsive UX—boosting conversions and fostering lasting customer loyalty.
                         </p>
 
-                        <a href="#" class="inline-block transition-all duration-300 hover:text-[#007bff] group">
+                        <a href="store-setup.html"
+                            class="inline-block transition-all duration-300 hover:text-[#007bff] group">
                             Launch your Shopify store today
                             <span
                                 class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -384,7 +612,8 @@
                             responsive UX—boosting conversions and fostering lasting customer loyalty.
                         </p>
 
-                        <a href="#" class="inline-block transition-all duration-300 hover:text-[#007bff] group">
+                        <a href="migration.html"
+                            class="inline-block transition-all duration-300 hover:text-[#007bff] group">
                             Migrate to shopify with confidence
                             <span
                                 class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -408,7 +637,8 @@
                                 for advanced features and workflows.
                             </p>
 
-                            <a href="#" class="inline-block transition-all duration-300 hover:text-[#007bff] group">
+                            <a href="shopify-development.html"
+                                class="inline-block transition-all duration-300 hover:text-[#007bff] group">
                                 Start your shopify development journey
                                 <span
                                     class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -517,7 +747,7 @@
 
                             <img src="assets/images/icons/boost-icon.svg" alt=""
                                 class="rocket-img absolute left-1/1 bottom-8 -translate-x-1/2 z-10">
-                            <a href="#"
+                            <a href="Contact-us.html"
                                 class="lets-connect-btn opacity-0 pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-90 transition-all duration-500  text-center text-white   font-semibold text-sm bg-transparent  z-20">Let's
                                 Connect</a>
                         </div>
@@ -541,7 +771,7 @@
                     Session – Together, We'll set you up for success
                 </h1>
 
-                <a href="#" class="fr-button">
+                <a href="Contact-us.html" class="fr-button">
                     <img src="assets/images/icons/btn-arrow.webp" alt="">
                     Book a Call Now
                 </a>
@@ -578,7 +808,7 @@
                         </p>
                     </div>
 
-                    <a href="#" class="fr-button">
+                    <a href="Contact-us.html" class="fr-button">
                         <img src="assets/images/icons/package-btn-icon.svg" alt="">
                         Book A Call
                     </a>
@@ -621,7 +851,7 @@
                         </p>
                     </div>
 
-                    <a href="#" class="fr-button">
+                    <a href="Contact-us.html" class="fr-button">
                         <img src="assets/images/icons/package-btn-icon.svg" alt="">
                         Book A Call
                     </a>
@@ -664,7 +894,7 @@
                         </p>
                     </div>
 
-                    <a href="#" class="fr-button">
+                    <a href="Contact-us.html" class="fr-button">
                         <img src="assets/images/icons/package-btn-icon.svg" alt="">
                         Get a Custom Quote
                     </a>
@@ -682,7 +912,7 @@
         </div>
     </section>
 
-    <section class="testimonials-sec py-[120px] w-full relative">
+    <section id="reviews" class="testimonials-sec py-[120px] w-full relative">
         <div class="tst-top mb-[60px] flex flex-col justify-center items-center">
             <div class="work-direct flex justify-center items-center gap-[12px] mb-[12px]">
                 <span class="editor">Testimonials</span>
@@ -703,72 +933,189 @@
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide bg-[#FFFFFF] rev-box">
-                    <img src="assets/images/auth-img.svg" class="auth-img mb-[24px]" alt=""></img>
+                    <img src="assets/images/gajendra.webp" class="auth-img mb-[24px]" alt="">
 
-                    <p class="disc mb-[72px]">
-                        "Working with this team was a game-changer. They launched our Shopify store in days and
-                        nailed the design beyond expectations."
-                    </p>
+                    <p class="disc mb-[72px]">It was a fantastic experience working with them. They demonstrated a
+                        strong understanding of the requirements and delivered on time. Technical Side: Excellent
+                        proficiency in Figma, ...</p>
 
-                    <h5 class="auth-name mb-[4px]">James T.</h5>
-                    <h6 class="auth-position">Co-Founder at UrbanNest</h6>
+                    <h5 class="auth-name mb-[4px]">Gajendra Singh</h5>
                 </div>
+
                 <div class="swiper-slide bg-[#FFFFFF] rev-box">
-                    <img src="assets/images/auth-img.svg" class="auth-img mb-[24px]" alt=""></img>
-
-                    <p class="disc mb-[72px]">
-                        "Working with this team was a game-changer. They launched our Shopify store in days and
-                        nailed the design beyond expectations."
-                    </p>
-
-                    <h5 class="auth-name mb-[4px]">James T.</h5>
-                    <h6 class="auth-position">Co-Founder at UrbanNest</h6>
+                    <img src="assets/images/stephen.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">Their service, speed, and creativity are truly outstanding. They have an
+                        exceptional ability to transform simple sketches into breathtaking results, showcasing excellent
+                        ......</p>
+                    <h5 class="auth-name mb-[4px]">Stephen</h5>
                 </div>
+
                 <div class="swiper-slide bg-[#FFFFFF] rev-box">
-                    <img src="assets/images/auth-img.svg" class="auth-img mb-[24px]" alt=""></img>
-
-                    <p class="disc mb-[72px]">
-                        "Working with this team was a game-changer. They launched our Shopify store in days and
-                        nailed the design beyond expectations."
-                    </p>
-
-                    <h5 class="auth-name mb-[4px]">James T.</h5>
-                    <h6 class="auth-position">Co-Founder at UrbanNest</h6>
+                    <img src="assets/images/janas.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">I can confidently say I've never recommended an agency as much as I have
+                        ShopifyDevelopersCompany. While part of me wants to keep them a secret, I can't help but share
+                        their excellence with everyone. People often .......</p>
+                    <h5 class="auth-name mb-[4px]">Jonas Birk</h5>
                 </div>
+
                 <div class="swiper-slide bg-[#FFFFFF] rev-box">
-                    <img src="assets/images/auth-img.svg" class="auth-img mb-[24px]" alt=""></img>
-
-                    <p class="disc mb-[72px]">
-                        "Working with this team was a game-changer. They launched our Shopify store in days and
-                        nailed the design beyond expectations."
-                    </p>
-
-                    <h5 class="auth-name mb-[4px]">James T.</h5>
-                    <h6 class="auth-position">Co-Founder at UrbanNest</h6>
+                    <img src="assets/images/linx.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">Was a great experience working with ascreations. We slotted in perfectly
+                        with our project management style and design ethics. Very responsive to change .......</p>
+                    <h5 class="auth-name mb-[4px]">Linx Dayn</h5>
                 </div>
+
                 <div class="swiper-slide bg-[#FFFFFF] rev-box">
-                    <img src="assets/images/auth-img.svg" class="auth-img mb-[24px]" alt=""></img>
-
-                    <p class="disc mb-[72px]">
-                        "Working with this team was a game-changer. They launched our Shopify store in days and
-                        nailed the design beyond expectations."
-                    </p>
-
-                    <h5 class="auth-name mb-[4px]">James T.</h5>
-                    <h6 class="auth-position">Co-Founder at UrbanNest</h6>
+                    <img src="assets/images/gerry.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">Don't wait any longer—bring your projects to life with
+                        ShopifyDevelopersCompany today!</p>
+                    <h5 class="auth-name mb-[4px]">Gerry Max</h5>
                 </div>
+
                 <div class="swiper-slide bg-[#FFFFFF] rev-box">
-                    <img src="assets/images/auth-img.svg" class="auth-img mb-[24px]" alt=""></img>
-
-                    <p class="disc mb-[72px]">
-                        "Working with this team was a game-changer. They launched our Shopify store in days and
-                        nailed the design beyond expectations."
-                    </p>
-
-                    <h5 class="auth-name mb-[4px]">James T.</h5>
-                    <h6 class="auth-position">Co-Founder at UrbanNest</h6>
+                    <img src="assets/images/sarah.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">Working with ShopifyDevelopersCompany has been a transformative experience
+                        for my online store. Their team understood my vision from the very beginning and delivered a
+                        stunning, fully functional solution .............</p>
+                    <h5 class="auth-name mb-[4px]">Sarah Khan</h5>
                 </div>
+
                 <div class="swiper-slide bg-[#FFFFFF] rev-box">
+                    <img src="assets/images/mina.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">
+                        I'm thoroughly impressed with the creativity and dedication of the
+                        ShopifyDevelopersCompany team. From concept to delivery, they were deeply
+                        involved, ensuring every detail of our mobile project was perfected .........
+                    </p>
+                    <h5 class="auth-name mb-[4px]">Mina Ali</h5>
+                </div>
+
+                <div class="swiper-slide bg-[#FFFFFF] rev-box">
+                    <img src="assets/images/linda.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">
+                        ShopifyDevelopersCompany's customization services elevated my store to the next
+                        level. The new features they integrated have made managing my products
+                        significantly easier and more efficient ........
+                    </p>
+                    <h5 class="auth-name mb-[4px]">Linda Green</h5>
+                </div>
+
+                <div class="swiper-slide bg-[#FFFFFF] rev-box">
+                    <img src="assets/images/Emma.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">
+                        From wireframes to final product, ShopifyDevelopersCompany nailed every detail
+                        of our mobile app design. The user interface is clean, intuitive, and exactly what we needed to
+                        ...........
+                    </p>
+                    <h5 class="auth-name mb-[4px]">Emma Thompson</h5>
+                </div>
+
+                <div class="swiper-slide bg-[#FFFFFF] rev-box">
+                    <img src="assets/images/zach.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">
+                        Can't recommend highly enough. They got the phone with me at the beginning to
+                        clarify the project specs, and delivered before deadline. Immediately ........
+                    </p>
+                    <h5 class="auth-name mb-[4px]">Zach Robbie</h5>
+                </div>
+
+                <div class="swiper-slide bg-[#FFFFFF] rev-box">
+                    <img src="assets/images/tubais.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">
+                        The UI/UX design provided was outstanding, creating an intuitive and engaging
+                        interface that has received great feedback. The WordPress development was .....
+                    </p>
+                    <h5 class="auth-name mb-[4px]">Tobais Purro</h5>
+                </div>
+
+                <div class="swiper-slide bg-[#FFFFFF] rev-box">
+                    <img src="assets/images/andy.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">
+                        They are really professional , They understand all of my complexity and adapt.
+                    </p>
+                    <h5 class="auth-name mb-[4px]">Andy Anago</h5>
+                </div>
+
+                <div class="swiper-slide bg-[#FFFFFF] rev-box">
+                    <img src="assets/images/joseph.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">
+                        The ShopifyDevelopersCompany team was absolutely brilliant! Their communication
+                        was exceptional, and their flexibility in adapting to my requirements ensures
+                        I'll be coming back for future projects .....
+                    </p>
+                    <h5 class="auth-name mb-[4px]">Joseph Todd</h5>
+                </div>
+
+                <div class="swiper-slide bg-[#FFFFFF] rev-box">
+                    <img src="assets/images/kety.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">
+                        honestly, amazing! It's most probably the Swiss in me, but I truly appreciated
+                        the well-structured, great communication and accurate service I received ..............
+                    </p>
+                    <h5 class="auth-name mb-[4px]">Kety Duers</h5>
+                </div>
+
+                <div class="swiper-slide bg-[#FFFFFF] rev-box">
+                    <img src="assets/images/giorgio.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">
+                        Working with ShopifyDevelopersCompany was an absolute pleasure! Their
+                        professionalism, creativity, and proactive communication far exceeded my
+                        expectations. Beyond ........
+                    </p>
+                    <h5 class="auth-name mb-[4px]">Giorgio Mihaila</h5>
+                </div>
+
+                <div class="swiper-slide bg-[#FFFFFF] rev-box">
+                    <img src="assets/images/momin.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">
+                        Always a pleasure to work with! It's been fantastic collaborating with
+                        ShopifyDevelopersCompany. I highly recommend them for all your future
+                        projects—they possess exceptional skills and expertise .............
+                    </p>
+                    <h5 class="auth-name mb-[4px]">Momin Qamar Sheikh</h5>
+                </div>
+
+                <div class="swiper-slide bg-[#FFFFFF] rev-box">
+                    <img src="assets/images/james.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">
+                        The ShopifyDevelopersCompany team went above and beyond in redesigning our SaaS
+                        platform. Their UI/UX expertise transformed our user experience, resulting in
+                        outstanding outcomes ........
+                    </p>
+                    <h5 class="auth-name mb-[4px]">James Peterson</h5>
+                </div>
+
+                <div class="swiper-slide bg-[#FFFFFF] rev-box">
+                    <img src="assets/images/david.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">
+                        We hired ShopifyDevelopersCompany to revamp our website, and they delivered a
+                        sleek, modern design that perfectly aligns with our brand. Their attention to
+                        detail and commitment were truly exceptional .......
+                    </p>
+                    <h5 class="auth-name mb-[4px]">David Lawson</h5>
+                </div>
+
+                <div class="swiper-slide bg-[#FFFFFF] rev-box">
+                    <img src="assets/images/ravi.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">
+                        ShopifyDevelopersCompany is a dream to work with! Their professionalism and
+                        technical expertise helped us build a secure, scalable web application that our
+                        users love. The API integration was seamless and efficient ......
+                    </p>
+                    <h5 class="auth-name mb-[4px]">Ravi Sharma</h5>
+                </div>
+
+                <div class="swiper-slide bg-[#FFFFFF] rev-box">
+                    <img src="assets/images/Olivia.webp" class="auth-img mb-[24px]" alt="">
+                    <p class="disc mb-[72px]">
+                        I couldn't be happier with ShopifyDevelopersCompany's web development services.
+                        Their team was responsive and provided excellent recommendations that
+                        significantly boosted our performance ........
+                    </p>
+                    <h5 class="auth-name mb-[4px]">Olivia Reed</h5>
+                </div>
+
+                <!-- <div class="swiper-slide bg-[#FFFFFF] rev-box">
                     <img src="assets/images/auth-img.svg" class="auth-img mb-[24px]" alt=""></img>
 
                     <p class="disc mb-[72px]">
@@ -778,7 +1125,7 @@
 
                     <h5 class="auth-name mb-[4px]">James T.</h5>
                     <h6 class="auth-position">Co-Founder at UrbanNest</h6>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -792,7 +1139,7 @@
             <h4>Trusted by 5,000+ customers worldwide</h4>
         </div>
 
-        <a href="#" class="fr-button">
+        <a href="Contact-us.html" class="fr-button">
             <img src="assets/images/icons/btn-arrow.webp" alt="">
             Book a Call Now
         </a>
@@ -810,7 +1157,7 @@
                     Get started with a flexible monthly plan, submit your Shopify tasks, and
                     receive top-quality results—fast and hassle-free.
                 </p>
-                <a href="#" class="fr-button">
+                <a href="Contact-us.html" class="fr-button">
                     <img src="assets/images/icons/btn-arrow.webp" alt="">
                     Book a Call Now
                 </a>
@@ -821,7 +1168,7 @@
     <footer class="pt-[302px] w-full">
         <div class="my-container">
             <div
-                class="footer-top grid grid-cols-[483px_1fr] gap-[133px] pb-[80px] lg:gap-[60px] lg:grid-cols-[430px_1fr]">
+                class="footer-top grid grid-cols-[360px_1fr] gap-[40px] pb-[80px] lg:gap-[60px] lg:grid-cols-[430px_1fr]">
                 <div class="ft-left flex flex-col gap-[50px]">
                     <img class="footer-logo" src="assets/images/Logo.svg" alt="">
 
@@ -859,19 +1206,19 @@
                         <h1 class="heading pb-[32px]">Quick Links</h1>
                         <ul class="flex flex-col gap-[20px]">
                             <li>
-                                <a href="#">Home</a>
+                                <a href="/">Home</a>
                             </li>
                             <li>
-                                <a href="#">About Us</a>
+                                <a href="about.html">About Us</a>
                             </li>
                             <li>
-                                <a href="#">Services</a>
+                                <a href="/#services">Services</a>
                             </li>
                             <li>
-                                <a href="#">Previous Work</a>
+                                <a href="/#services">Previous Work</a>
                             </li>
                             <li>
-                                <a href="#">Contact US</a>
+                                <a href="Contact-us.html">Contact US</a>
                             </li>
                         </ul>
                     </div>
@@ -904,8 +1251,7 @@
             <div class="footer-bottom py-[41px] flex items-center justify-between">
                 <span>© 2025 Shopify Development Company</span>
                 <div class="fb-right flex items-center gap-[20px]">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Cookie Policy</a>
+                    <a href="Privacy-policy.html">Privacy Policy</a>
                 </div>
             </div>
         </div>
@@ -929,6 +1275,9 @@
 
     <!-- Initialize Swiper -->
     <script src="assets/js/custom.js"></script>
+
+    <!-- Add overlay div for mobile menu -->
+    <div class="nav-overlay"></div>
 
     <script>
         const formmmmm = document.getElementById('contactForm');
@@ -1075,6 +1424,54 @@
                 }, 5000);
             }
         }
+
+        // Mobile Menu Toggle
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('.nav-menu');
+        const navOverlay = document.querySelector('.nav-overlay');
+        const servicesLink = document.querySelector('.group > a');
+        const servicesDropdown = document.querySelector('.group > ul');
+
+        function toggleMenu() {
+            hamburgerMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        // Handle mobile menu
+        // if (window.innerWidth <= 1200) {
+        hamburgerMenu.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', toggleMenu);
+
+        // Handle services dropdown in mobile view
+        servicesLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            servicesDropdown.classList.toggle('active');
+        });
+        // }
+
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-menu a:not(.group > a)');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 1200) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1200) {
+                // Reset mobile menu state
+                hamburgerMenu.classList.remove('active');
+                navMenu.classList.remove('active');
+                navOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+                servicesDropdown.classList.remove('active');
+            }
+        });
     </script>
 
 </body>
