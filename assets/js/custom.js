@@ -1,15 +1,15 @@
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
-        slidesPerView: "auto",
-        spaceBetween: 30, 
-        loop: true,
-        centeredSlides: true,
-        speed: 800,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-    });
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    loop: true,
+    centeredSlides: true,
+    speed: 800,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
 
 // Counter animation function
 function animateCounter(element, target, duration = 2000) {
@@ -53,3 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(aboutSection);
     }
 });
+
+
+
+

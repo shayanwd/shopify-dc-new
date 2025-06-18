@@ -24,13 +24,213 @@
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
 
+    <style>
+        /* Hamburger Menu Styles */
+        .hamburger-menu {
+            width: 30px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+            z-index: 100000;
+        }
+
+        .hamburger-menu span {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: #fff;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-menu span:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger-menu span:nth-child(2) {
+            top: 9px;
+        }
+
+        .hamburger-menu span:nth-child(3) {
+            top: 18px;
+        }
+
+        /* Active state for hamburger menu */
+        .hamburger-menu.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 9px;
+        }
+
+        .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 9px;
+        }
+
+        /* Desktop Navigation Styles */
+        .nav-menu {
+            display: block;
+        }
+
+        .nav-menu ul {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-menu .group ul {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 240px;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            padding: 0.5rem 0;
+            display: none;
+        }
+
+        .nav-menu .group:hover ul {
+            display: block;
+        }
+
+        .hide-resp {
+            display: none;
+        }
+
+        /* Mobile Menu Styles */
+        @media (min-width: 1200px) {
+            .hamburger-menu {
+                display: none !important;
+            }
+
+            .show-resp {
+                display: none;
+            }
+
+            .hide-resp {
+                display: block;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .hamburger-menu {
+                display: block !important;
+                width: 30px;
+                height: 20px;
+                position: relative;
+                cursor: pointer;
+                z-index: 100000;
+                background: transparent;
+                border: none;
+                padding: 0;
+            }
+
+            .hamburger-menu span {
+                display: block;
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                background: #fff;
+                border-radius: 2px;
+                transition: all 0.3s ease;
+            }
+
+            .hamburger-menu span:nth-child(1) {
+                top: 0;
+            }
+
+            .hamburger-menu span:nth-child(2) {
+                top: 9px;
+            }
+
+            .hamburger-menu span:nth-child(3) {
+                top: 18px;
+            }
+
+            .hamburger-menu.active span:nth-child(1) {
+                transform: rotate(45deg);
+                top: 9px;
+            }
+
+            .hamburger-menu.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger-menu.active span:nth-child(3) {
+                transform: rotate(-45deg);
+                top: 9px;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 300px;
+                height: 100%;
+                background: #161616;
+                transition: all 0.3s ease;
+                z-index: 99999;
+                padding-top: 80px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu ul {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .nav-menu .group ul {
+                position: static;
+                width: 100%;
+                background: transparent;
+                box-shadow: none;
+                padding: 0;
+                margin-top: 10px;
+                display: none;
+            }
+
+            .nav-menu .group ul.active {
+                display: block;
+            }
+
+            .nav-menu .group ul li a {
+                color: #fff !important;
+            }
+
+            .nav-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 99998;
+                display: none;
+            }
+
+            .nav-overlay.active {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Top Bar -->
     <div class="top-bar p-[20px] flex justify-between items-center">
         <div class="left">
             <ul>
@@ -67,62 +267,91 @@
         </div>
     </div>
 
-    <header class="px-[20px] w-full">
+    <!-- Header -->
+    <header class="px-[20px] pt-[20px] w-full sticky top-0 z-[99999]">
         <div class="header-inner flex gap-[10px]">
             <div
                 class="mn-header flex justify-between items-center bg-[#161616] px-[40px] py-[20px] rounded-[20px] w-full">
                 <div class="logo">
-                    <a href="#" class="w-fit block">
+                    <a href="/" class="w-fit block">
                         <img class="w-full block max-w-[200px] object-contain" src="assets/images/header-logo.svg"
                             alt="">
                     </a>
                 </div>
 
-                <ul class="flex items-center gap-[30px] justify-end xl:gap-[20px]">
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#" class="active">About Us</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Previous Work</a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center gap-[4px]">
-                            <img src="assets/images/icons/menu-star.svg" alt="">
-                            Reviews
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center gap-[4px]">
-                            <img src="assets/images/icons/menu-phone.svg" alt="">
-                            Contact Us
-                        </a>
-                    </li>
-                </ul>
+                <!-- Hamburger Menu Button -->
+                <button class="hamburger-menu hidden xl:block" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <nav class="nav-menu">
+                    <ul class="flex items-center gap-[30px] justify-end">
+                        <li>
+                            <a href="/" class="active">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li class="relative group">
+                            <a href="/#services" class="flex items-center gap-[4px]">Services</a>
+                            <ul
+                                class="absolute left-0 top-[100%] w-48 bg-white shadow-lg rounded-lg py-2 hidden group-hover:block">
+                                <li><a href="migration.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Migration</a>
+                                </li>
+                                <li><a href="ux-web.html" class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">UX &
+                                        Web
+                                        Design</a></li>
+                                <li><a href="store-setup.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Store
+                                        Setup</a></li>
+                                <li><a href="shopify-development.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify
+                                        Development</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Previous Work</a>
+                        </li>
+                        <li>
+                            <a href="#reviews" class="flex items-center gap-[4px]">
+                                <img src="assets/images/icons/menu-star.svg" alt="">
+                                Reviews
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Contact-us.html" class="flex items-center gap-[4px]">
+                                <img src="assets/images/icons/menu-phone.svg" alt="">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <div class="right-cta">
-                <a href="#" class="fr-button px-[26px] w-max xl:text-[16px]">
+                <a href="Contact-us.html" class="fr-button !px-[26px] w-max text-[16px]">
                     <img src="assets/images/icons/btn-arrow.webp" alt="">
-                    Let's Discuss Project!
+                    <span class="hide-resp">Let's Discuss Project!</span>
+                    <span class="show-resp">Contact</span>
                 </a>
             </div>
         </div>
     </header>
 
-    <section class="hero-sec service-hero abt-hero py-[120px]">
+    <!-- Hero Section -->
+    <section class="mg-hero hero-sec service-hero abt-hero xl:py-[120px] py-[60px]">
         <div class="hr-container">
-            <div class="hr-inner grid grid-cols-[56%_1fr] items-center gap-[60px]">
-                <div class="hr-left flex flex-col gap-[33px]">
+            <div
+                class="hr-inner grid grid-cols-[100%] xl:grid-cols-[56%_1fr] items-center xl:gap-[60px] gap-[24px] sm:grid-cols-[100%] md:grid-cols-[50%_1fr] lg:grid-cols-[56%_1fr] md:gap-[35px] lg:gap-[60px]">
+                <div class="hr-left flex flex-col gap-[20px] md:gap-[20px] xl:gap-[33px] lg:gap-[33px]  xl:justify-center lg:justify-center md:justify-center justify-center xl:items-start lg:items-start md:items-start">
                     <div class="work-direct">
                         <span class="editor block w-fit">Shopify Migration</span>
                     </div>
 
-                    <h1 class="sec-title st-service">
+                    <h1 class="sec-title st-service w-[120%] md:w-full lg:w-full xl:w-[120%]">
                         Seamless
                         <span class="editor">Shopify</span> Store <br>
                         Migration Services
@@ -131,7 +360,7 @@
                     <p class="disc"> Migrate your ecommerce store to Shopify without losing data, traffic, or SEO value
                         — trusted by brands in Singapore and worldwide.</p>
 
-                    <div class="hero-ctas">
+                    <div class="hero-ctas flex gap-[10px] flex-wrap md:gap-[12px] xl:gap-[20px] lg:gap-[20px] items-center lg:justify-start md:justify-start xl:justify-start justify-center xl:justify-start">
                         <a href="#" class="fr-button">
                             <img src="assets/images/icons/btn-arrow.webp" alt="">
                             Get a Free Migration Quote
@@ -152,9 +381,10 @@
         </div>
     </section>
 
-    <section class="key about-sec w-[100%] bg-[#1C1C1C] py-[120px]">
+    <!-- Key Benefits -->
+    <section class="key about-sec w-[100%] bg-[#1C1C1C] xl:py-[120px] py-[80px]">
         <div class="my-container">
-            <div class="about-top mb-[60px]">
+            <div class="about-top xl:mb-[60px] mb-[24px]">
                 <span class="bf-title mb-[12px]">
                     <img src="assets/images/icons/benefit-br-icon.svg" alt="">
                     Key Benefits
@@ -175,7 +405,7 @@
             </div>
 
             <div class="about-bottom">
-                <div class="btn-boxes flex justify-center items-center gap-[30px]">
+                <div class="btn-boxes flex justify-center items-center xl:gap-[30px] gap-[10px]">
                     <a href="#" class="fr-button">
                         <img src="assets/images/icons/btn-arrow.webp" alt="">
                         Book a Free Consultion
@@ -190,10 +420,11 @@
         </div>
     </section>
 
+    <!-- Count Strip -->
     <section class="count-strip-sec">
         <div class="my-container">
             <div class="about-bottom">
-                <div class="for-pr-ex px-[80px] grid justify-between items-center">
+                <div class="for-pr-ex xl:px-[80px] px-[40px] grid xl:justify-between items-center grid-cols-4 md:grid-cols-4 lg:grid-cols-4">
                     <div class="ex-box flex items-center flex-col justify-center gap-[8px]">
                         <h2 class="editor">150+</h2>
                         <span>Websites Built</span>
@@ -218,18 +449,19 @@
         </div>
     </section>
 
-    <section class="work-sec shade py-[120px] w-full bg-[#F5F5F5]">
+    <!-- What We Offer -->
+    <section class="work-sec shade xl:py-[120px] py-[60px] w-full bg-[#F5F5F5]">
         <div class="my-container">
-            <div class="wk-top mb-[32px] flex flex-col justify-center items-center">
+            <div class="wk-top xl:mb-[32px] mb-[24px] flex flex-col justify-center items-center">
                 <div class="work-direct flex justify-center items-center gap-[12px] mb-[12px]">
                     <span class="editor">What We Offer</span>
                 </div>
 
-                <h1 class="sec-title text-center max-w-[682px]">
+                <h1 class="sec-title text-center xl:max-w-[682px] max-w-[100%]">
                     What's Included in our <span class="editor"> Shopify Migration </span>Services
                 </h1>
             </div>
-            <div class="wcu-grid wcu-flexed flex flex-wrap justify-center gap-[30px]">
+            <div class="wcu-grid wcu-flexed flex flex-wrap justify-center xl:gap-[30px] gap-[16px]">
                 <div
                     class="wcu-card bg-white rounded-[20px] p-[20px] flex flex-col gap-[24px] text-left border border-1 border-[#1C1C1C1A]">
                     <div class="flex items-center">
@@ -239,7 +471,7 @@
                     </div>
                     <div>
                         <h3
-                            class="jk text-[#1C1C1C] font-semibold text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
                             Complete Shopify data migration</h3>
                         <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">(products, customers,
                             orders, content)</p>
@@ -258,7 +490,7 @@
                     </div>
                     <div>
                         <h3
-                            class="jk text-[#1C1C1C] font-semibold text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
                             SEO redirect setup and metadata preservation</h3>
                         <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">URL mapping, metadata
                             preservation, and 301 redirects.</p>
@@ -277,7 +509,7 @@
                     </div>
                     <div>
                         <h3
-                            class="jk text-[#1C1C1C] font-semibold text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
                             Theme recreation or redesign on Shopify</h3>
                         <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Secure transfer of
                             products, customers, orders, and content.</p>
@@ -296,7 +528,7 @@
                     </div>
                     <div>
                         <h3
-                            class="jk text-[#1C1C1C] font-semibold text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
                             Integration of payment, shipping, and tax systems</h3>
                         <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Responsive design,
                             brand alignment, and performance optimization.</p>
@@ -315,7 +547,7 @@
                     </div>
                     <div>
                         <h3
-                            class="jk text-[#1C1C1C] font-semibold text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
                             Blog, page, and media migration</h3>
                         <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Payment gateways,
                             ERP/CRM connections, and bespoke functionality.</p>
@@ -335,7 +567,7 @@
                     </div>
                     <div>
                         <h3
-                            class="jk text-[#1C1C1C] font-semibold text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
                             Post-migration testing and QA</h3>
                         <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Cross-device testing,
                             load-time analysis, and bug fixes.</p>
@@ -355,7 +587,7 @@
                     </div>
                     <div>
                         <h3
-                            class="jk text-[#1C1C1C] font-semibold text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
                             Shopify Plus migration for high-volume stores</h3>
                         <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">DNS updates,
                             monitoring, and instant rollback plan</p>
@@ -369,7 +601,8 @@
         </div>
     </section>
 
-    <section class="migtrate about-sec w-[100%] bg-[#1C1C1C] py-[120px]">
+    <!-- Why Migrate to Shopify? -->
+    <section class="migtrate about-sec w-[100%] bg-[#1C1C1C] xl:py-[120px] py-[80px]">
         <div class="my-container">
             <div class="about-top">
                 <span class="bf-title mb-[12px]">
@@ -383,7 +616,8 @@
             </div>
 
             <div class="about-bottom">
-                <div class="for-pr-ex grid justify-between items-center mt-[60px]">
+                <div
+                    class="for-pr-ex grid xl:grid-cols-6 grid-cols-2 xl:gap-[48px] gap-[20px] md:gap-[48px] lg:gap-[48px] justify-between items-center mt-[24px] xl:mt-[60px] md:grid-cols-3 lg:grid-cols-6">
                     <div class="ex-box flex items-center flex-col justify-center gap-[10px]">
                         <img src="assets/images/icons/faster.svg" alt="">
                         <span>Faster and more secure platform</span>
@@ -417,16 +651,17 @@
         </div>
     </section>
 
-    <section class="work-sec shade py-[120px] w-full bg-[#F5F5F5]">
+    <!-- Why Choose us? -->
+    <section class="work-sec shade xl:py-[120px] py-[60px] w-full bg-[#F5F5F5]">
         <div class="my-container">
-            <div class="wk-top mb-[32px] flex flex-col justify-center items-center">
+            <div class="wk-top xl:mb-[32px] mb-[24px] flex flex-col justify-center items-center">
                 <div class="work-direct flex justify-center items-center gap-[12px] mb-[12px]">
 
                     <span class="editor">Why Choose us?</span>
                 </div>
 
-                <h1 class="sec-title text-center mb-[24px] max-w-[770px]">
-                    Why Choose our <br/><span class="editor">Shopify Migration</span> Company?
+                <h1 class="sec-title text-center mb-[24px] xl:max-w-[770px] max-w-[100%]">
+                    Why Choose our <br /><span class="editor">Shopify Migration</span> Company?
                 </h1>
 
                 <p class="disc text-center">
@@ -436,7 +671,7 @@
                     vision to life. Let us help you build a powerful, scalable Shopify store tailored perfectly to your
                     business needs! </p>
             </div>
-            <div class="wcu-grid wcu-flexed flex flex-wrap justify-center gap-[30px]">
+            <div class="wcu-grid wcu-flexed flex flex-wrap justify-center xl:gap-[30px] gap-[16px]">
                 <div
                     class="wcu-card bg-white rounded-[20px] p-[20px] flex flex-col gap-[24px] text-left border border-1 border-[#1C1C1C1A]">
                     <div class="flex items-center">
@@ -445,7 +680,7 @@
                     </div>
                     <div>
                         <h3
-                            class="jk text-[#1C1C1C] font-semibold text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
                             Certified Shopify developers & migration specialists</h3>
                     </div>
                     <a href="#"
@@ -461,7 +696,7 @@
                     </div>
                     <div>
                         <h3
-                            class="jk text-[#1C1C1C] font-semibold text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
                             Fast turnaround with minimal downtime</h3>
                     </div>
                     <a href="#"
@@ -477,7 +712,7 @@
                     </div>
                     <div>
                         <h3
-                            class="jk text-[#1C1C1C] font-semibold text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
                             100% data accuracy guarantee</h3>
                     </div>
                     <a href="#"
@@ -493,7 +728,7 @@
                     </div>
                     <div>
                         <h3
-                            class="jk text-[#1C1C1C] font-semibold text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
                             SEO-first migration with full redirection strategy</h3>
                     </div>
                     <a href="#"
@@ -509,7 +744,7 @@
                     </div>
                     <div>
                         <h3
-                            class="jk text-[#1C1C1C] font-semibold text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
                             Dedicated project manager for every client</h3>
                     </div>
                     <a href="#"
@@ -526,7 +761,7 @@
                     </div>
                     <div>
                         <h3
-                            class="jk text-[#1C1C1C] font-semibold text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
                             Shopify Plus migration support</h3>
                     </div>
                     <a href="#"
@@ -538,12 +773,13 @@
         </div>
     </section>
 
-    <section class="platform about-sec w-[100%] bg-[#1C1C1C] py-[120px]">
+    <!-- We Migrate from all Major Platforms -->
+    <section class="platform about-sec w-[100%] bg-[#1C1C1C] xl:py-[120px] py-[80px]">
         <div class="my-container">
             <div class="about-top">
 
                 <h1 class="sec-title mb-[16px]">
-                    We <span class="editor">Migrate </span>from all Major Platforms
+                    We<span class="editor"> Migrate </span> from all Major Platforms
                 </h1>
                 <p class="disc">
                     Shopify Development Company is a leading Shopify experts team specializing in building custom
@@ -555,26 +791,29 @@
             </div>
 
             <div class="about-bottom">
-                <div class="for-pr-ex grid justify-between items-center my-[40px]">
-                    <img src="assets/images/icons/platform-img-01.svg" alt="">
+                <div
+                    class="for-pr-ex grid grid-cols-2 xl:grid-cols-6 xl:gap-[72px] gap-[20px] justify-between items-center xl:my-[40px] my-[24px] md:gap-[48px] md:grid-cols-3 lg:grid-cols-6">
+                    <div class="ex-box flex items-center flex-col justify-center">
+                        <img src="assets/images/icons/platform-img-01.svg" alt="">
+                    </div>
 
-                    <div class="ex-box flex items-center flex-col justify-center gap-[10px]">
+                    <div class="ex-box flex items-center flex-col justify-center">
                         <img src="assets/images/icons/platform-img-02.svg" alt="">
                     </div>
 
-                    <div class="ex-box flex items-center flex-col justify-center gap-[10px]">
+                    <div class="ex-box flex items-center flex-col justify-center">
                         <img src="assets/images/icons/platform-img-03.svg" alt="">
                     </div>
 
-                    <div class="ex-box flex items-center flex-col justify-center gap-[10px]">
+                    <div class="ex-box flex items-center flex-col justify-center">
                         <img src="assets/images/icons/platform-img-04.svg" alt="">
                     </div>
 
-                    <div class="ex-box flex items-center flex-col justify-center gap-[10px]">
+                    <div class="ex-box flex items-center flex-col justify-center">
                         <img src="assets/images/icons/platform-img-05.svg" alt="">
                     </div>
 
-                    <div class="ex-box flex items-center flex-col justify-center gap-[10px]">
+                    <div class="ex-box flex items-center flex-col justify-center">
                         <img src="assets/images/icons/platform-img-06.svg" alt="">
                     </div>
                 </div>
@@ -588,9 +827,10 @@
         </div>
     </section>
 
-    <section class="work-sec shade  pt-[120px] w-full bg-[#F5F5F5]">
+    <!-- Our Shopify Migration Process -->
+    <section class="work-sec shade xl:pt-[120px] pt-[60px] w-full bg-[#F5F5F5]">
         <div class="my-container">
-            <div class="wk-top mb-[60px] flex flex-col justify-center items-center">
+            <div class="wk-top xl:mb-[60px] mb-[30px] flex flex-col justify-center items-center">
                 <div class="work-direct flex justify-center items-center gap-[12px] mb-[12px]">
                     <span class="editor">Our Process</span>
                 </div>
@@ -600,12 +840,13 @@
                 </h1>
             </div>
 
-            <div class="migrate-card-holder wk-bottom grid grid-cols-3 gap-[30px] text-left">
+            <div
+                class="migrate-card-holder wk-bottom grid grid-cols-1 xl:grid-cols-3 gap-[30px] text-left md:grid-cols-2 lg:grid-cols-3">
                 <div class="wk-box grad-bg rotate">
                     <h3 class="wk-title bg-[#FFFFFF] mx-[auto] my-[0]">Step 01</h3>
                     <div class="wk-cost-inner flex flex-col gap-[12px] mt-[24px]">
                         <h2 class="after-title text-[#FFFFFF] text-center">Book Your Free Discovery Call</h2>
-                        
+
                         <div class="img-box-holder">
                             <div class="img-box relative flex items-center justify-center ">
 
@@ -966,9 +1207,10 @@
     </section> -->
 
 
-    <section class="subs-sec pt-[119px] mb-[-202px]">
+    <!-- Ready to Migrate -->
+    <section class="subs-sec xl:pt-[119px] pt-[30px] mb-[-202px]">
         <div class="my-container">
-            <div class="subs-inner py-[70px] px-[93px] flex flex-col items-center justify-center">
+            <div class="subs-inner xl:py-[70px] py-[30px] xl:px-[93px] px-[15px] flex flex-col items-center justify-center">
                 <h1 class="sec-title mb-[20px] text-center">
                     Ready to Migrate to Shopify?
                 </h1>
@@ -985,10 +1227,11 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="pt-[302px] w-full">
         <div class="my-container">
             <div
-                class="footer-top grid grid-cols-[483px_1fr] gap-[133px] pb-[80px] lg:gap-[60px] lg:grid-cols-[430px_1fr]">
+                class="footer-top grid xl:grid-cols-[360px_1fr] grid-cols-1 gap-[40px] pb-[80px] lg:gap-[60px] lg:grid-cols-[430px_1fr]">
                 <div class="ft-left flex flex-col gap-[50px]">
                     <img class="footer-logo" src="assets/images/Logo.svg" alt="">
 
@@ -1021,24 +1264,24 @@
                     </ul>
                 </div>
 
-                <div class="ft-right grid gap-[32px] lg:gap-[25px]">
+                <div class="ft-right grid gap-[32px] lg:gap-[25px] text-left">
                     <div class="ft-right-inner-pages">
                         <h1 class="heading pb-[32px]">Quick Links</h1>
                         <ul class="flex flex-col gap-[20px]">
                             <li>
-                                <a href="#">Home</a>
+                                <a href="/">Home</a>
                             </li>
                             <li>
-                                <a href="#">About Us</a>
+                                <a href="about.html">About Us</a>
                             </li>
                             <li>
-                                <a href="#">Services</a>
+                                <a href="/#services">Services</a>
                             </li>
                             <li>
-                                <a href="#">Previous Work</a>
+                                <a href="/#services">Previous Work</a>
                             </li>
                             <li>
-                                <a href="#">Contact US</a>
+                                <a href="Contact-us.html">Contact US</a>
                             </li>
                         </ul>
                     </div>
@@ -1071,8 +1314,7 @@
             <div class="footer-bottom py-[41px] flex items-center justify-between">
                 <span>© 2025 Shopify Development Company</span>
                 <div class="fb-right flex items-center gap-[20px]">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Cookie Policy</a>
+                    <a href="Privacy-policy.html">Privacy Policy</a>
                 </div>
             </div>
         </div>
@@ -1242,6 +1484,56 @@
                 }, 5000);
             }
         }
+
+
+
+        // Mobile Menu Toggle
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('.nav-menu');
+        const navOverlay = document.querySelector('.nav-overlay');
+        const servicesLink = document.querySelector('.group > a');
+        const servicesDropdown = document.querySelector('.group > ul');
+
+        function toggleMenu() {
+            hamburgerMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        // Handle mobile menu
+        // if (window.innerWidth <= 1200) {
+        hamburgerMenu.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', toggleMenu);
+
+        // Handle services dropdown in mobile view
+        servicesLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            servicesDropdown.classList.toggle('active');
+        });
+        // }
+
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-menu a:not(.group > a)');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 1200) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1200) {
+                // Reset mobile menu state
+                hamburgerMenu.classList.remove('active');
+                navMenu.classList.remove('active');
+                navOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+                servicesDropdown.classList.remove('active');
+            }
+        });
     </script>
 
 </body>
