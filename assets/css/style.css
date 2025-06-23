@@ -562,7 +562,7 @@ header .fr-button {
     transition-delay: 0s;
 }
 
-.wk-bottom .wk-box .servic-list h2 {
+.wk-bottom .wk-box .servic-list h4 {
     font-family: Plus Jakarta Sans;
     font-weight: 600;
     font-size: 24px;
@@ -579,7 +579,7 @@ header .fr-button {
     max-width: 24px;
 }
 
-.wk-bottom .wk-box .ic-box h3 {
+.wk-bottom .wk-box .ic-box h4 {
     font-family: Plus Jakarta Sans;
     font-weight: 400;
     font-size: 20px;
@@ -1026,8 +1026,11 @@ footer {
     color: #FFFFFF;
     text-decoration: none;
     word-break: break-word;
+    transition: color 0.2s ease;
 }
-
+.ft-right ul li a:hover {
+    color: #95BF47;
+}
 .ft-right ul li a img {
     width: 24px;
     height: 24px;
@@ -2002,7 +2005,7 @@ label {
         gap: 20px;
     }
 
-    .wk-bottom .wk-box .servic-list h2 {
+    .wk-bottom .wk-box .servic-list h4 {
         font-size: 20px;
         padding-bottom: 10px;
     }
