@@ -149,7 +149,7 @@ body {
 }
 
 .sec-title .editor {
-    font-size: 84px;
+    font-size: 72px;
     color: #95BF47;
 }
 
@@ -159,6 +159,7 @@ body {
     font-size: 20px;
     line-height: 130%;
     color: #5A5A5A;
+    letter-spacing: -0.5px;
 }
 
 .disc span {
@@ -199,7 +200,7 @@ body {
 
 .hero-sec .hr-right {
     width: 100%;
-    max-width: 600px;
+    max-width: 474px;
 }
 
 .sec-form form {
@@ -255,8 +256,12 @@ body {
     color: black;
     border-radius: 6px;
     width: 100%;
-
     outline: none !important;
+}
+
+.sec-form form .field-row .field-column textarea {
+    height: 44px;
+    resize: none;
 }
 
 .sec-form form .field-row .field-column select {
@@ -660,6 +665,7 @@ header .fr-button {
     font-size: 32px;
     line-height: 110.00000000000001%;
     color: #1C1C1C;
+    letter-spacing: -1px;
 }
 
 .ex-bottom .grad .serv-title {
@@ -672,6 +678,7 @@ header .fr-button {
     font-size: 16px;
     line-height: 150%;
     color: #1C1C1C;
+    letter-spacing: -0.5px;
 }
 
 .ex-bottom .grad .serv-disc {
@@ -750,6 +757,7 @@ header .fr-button {
     color: #1C1C1CCC;
     height: max-content;
     transition: color .4s ease-in;
+    flex: 1;
 }
 
 .migrate-card-holder.wk-bottom .wk-box {
@@ -1936,7 +1944,7 @@ label {
     }
 
     .hero-sec {
-        padding: 80px 0px;
+        padding: 80px 0px !important;
     }
 
     .hr-inner {
@@ -2126,10 +2134,6 @@ label {
         max-width: calc(100% / 2 - 20px) !important;
     }
 
-    .sec-title {
-        font-size: 52px;
-    }
-
     .disc {
         font-size: 18px;
     }
@@ -2225,7 +2229,7 @@ label {
     }
 
     .hero-sec {
-        padding: 60px 0px;
+        padding: 60px 0px !important;
     }
 
     .hr-inner {
@@ -2300,12 +2304,19 @@ label {
     .testimonials-sec {
         padding: 60px 0px;
     }
-
+    
+    .top-bar {
+        display: none;
+    }
+    
     header.sticky {
-        padding: 15px;
-        padding-bottom: 0px;
+        padding: 0px !important;
     }
 
+    .mn-header {
+        border-radius: 0px;
+    }
+    
     footer.w-full {
         padding-top: 280px;
     }
@@ -2342,11 +2353,7 @@ label {
 
     .top-bar .right {
         width: 100%;
-    }
-
-    .hero-sec .sec-title {
-        font-size: 38px;
-    }
+    } 
 
     .disc {
         font-size: 16px;
@@ -2419,11 +2426,7 @@ label {
     .top-bar {
         padding: 15px;
         padding-bottom: 0px;
-    }
-
-    .mn-header {
-        border-radius: 12px;
-    }
+    } 
 
     .mn-header .logo {
         max-width: 160px;
