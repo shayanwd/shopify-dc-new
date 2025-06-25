@@ -1036,9 +1036,11 @@ footer {
     word-break: break-word;
     transition: color 0.2s ease;
 }
+
 .ft-right ul li a:hover {
     color: #95BF47;
 }
+
 .ft-right ul li a img {
     width: 24px;
     height: 24px;
@@ -1362,13 +1364,6 @@ label {
 
 
 /* FAQs-Page */
-.faqs-sec {
-    width: 100%;
-    padding: 120px 0 0;
-}
-
-
-
 .accordion-item {
     margin-bottom: 32px;
     border-radius: 12px;
@@ -1410,11 +1405,6 @@ label {
     align-items: center;
 }
 
-.accordion-header .left img {
-    width: 52px;
-    height: 52px;
-}
-
 .accordion-body {
     overflow: hidden;
     padding: 0 16px;
@@ -1440,11 +1430,6 @@ label {
 }
 
 /* Get in touch  */
-
-.get-in-touch-sec {
-    width: 100%;
-    padding: 150px 0 0;
-}
 
 .bottom-form-holder {
     display: grid;
@@ -1499,6 +1484,7 @@ label {
     font-weight: 600;
     font-size: 24px;
     text-align: left;
+    line-height: 140%;
     letter-spacing: -4%;
 }
 
@@ -1905,13 +1891,42 @@ label {
     .sec-title.st-service br {
         display: none;
     }
+
+    .bottom-form-holder .right-info:before {
+        bottom: -75px;
+    }
 }
 
 @media (max-width: 1024px) {
+    .about-work-sec .wcu-flexed .home-wcu-card {
+        max-width: calc(100% / 2 - 20px) !important;
+    }
+
+    .bottom-form-holder .right-info:before {
+        bottom: 0;
+    }
+
+    .bottom-form-holder {
+        grid-template-columns: 1fr 50%;
+    }
+
+    .bottom-form-holder form .field-row {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .bottom-form-holder .right-info {
+        padding: 35px 20px !important;
+    }
+
+    .bottom-form-holder .right-info h3 {
+        font-size: 20px;
+        line-height: 120%;
+    }
 
     .sec-title,
     .sec-title .editor {
-        font-size: 45px;
+        font-size: 55px;
     }
 
     .policy-sec .pr-top p.disc {
@@ -1931,12 +1946,7 @@ label {
     .tst-top .sec-title span,
     .ex-top .sec-title span,
     .wk-top .sec-title span {
-        font-size: 40px;
-    }
-
-    .accordion-header .left img {
-        width: 40px;
-        height: 40px;
+        font-size: 55px;
     }
 
     .accordion-header .left {
@@ -1954,10 +1964,6 @@ label {
     .c-ico::after {
         width: 35px;
         height: 35px;
-    }
-
-    .disc {
-        font-size: 16px;
     }
 
     .serv-platform img {
@@ -2105,10 +2111,6 @@ label {
         line-height: 130%;
     }
 
-    .testimonials-sec {
-        padding: 80px 0px;
-    }
-
     .rev-box {
         height: auto;
     }
@@ -2118,7 +2120,7 @@ label {
     }
 
     .footer-top {
-        grid-template-columns: 100%;
+        grid-template-columns: 100% !important;
         gap: 80px;
     }
 
@@ -2179,19 +2181,14 @@ label {
         font-size: 16px;
     }
 
-    .policy-sec .pr-top p.disc {
-        font-size: 16px !important;
-    }
-
     .policy-sec .cntn .policy-heading {
         font-size: 26px;
     }
 
 
     .accordion-header .left {
-        font-size: 17px;
         text-align: left;
-        gap: 8px;
+        gap: 14px;
     }
 
     .arrow svg {
@@ -2252,6 +2249,10 @@ label {
         font-size: 46px;
     }
 
+    .fs-title {
+        font-size: 46px !important;
+    }
+
     .expert-sec .sec-title {
         width: 100%;
     }
@@ -2301,14 +2302,10 @@ label {
         flex-basis: 40%;
     }
 
-    .testimonials-sec {
-        padding: 60px 0px;
-    }
-    
     .top-bar {
         display: none;
     }
-    
+
     header.sticky {
         padding: 0px !important;
     }
@@ -2316,7 +2313,7 @@ label {
     .mn-header {
         border-radius: 0px;
     }
-    
+
     footer.w-full {
         padding-top: 280px;
     }
@@ -2353,14 +2350,10 @@ label {
 
     .top-bar .right {
         width: 100%;
-    } 
-
-    .disc {
-        font-size: 16px;
     }
 
     .sec-title {
-        font-size: 38px;
+        font-size: 40px;
     }
 
     .work-direct span {
@@ -2382,9 +2375,46 @@ label {
     .editor {
         font-size: inherit;
     }
+
+    .bottom-form-holder .right-info ul li a {
+        padding: 12px 10px;
+    }
+
+    .bottom-form-holder .right-info ul li a span {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 575px) {
+    .get-in-touch-sec .my-container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .bottom-form-holder {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .bottom-form-holder .right-info {
+        padding: 50px 20px !important;
+        min-height: 640px;
+        border-radius: 0;
+    }
+
+    .sec-form form {
+        padding: 50px 20px;
+        border-radius: 0;
+    }
+
+    .bottom-form-holder .right-info ul li a {
+        padding: 14px 16px;
+    }
+
+    .bottom-form-holder .right-info ul li a span {
+        font-size: 16px;
+    }
+
     .publish-dt h6 {
         font-size: 14px;
     }
@@ -2404,29 +2434,28 @@ label {
         height: 18px;
     }
 
-    .accordion-header .left img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .accordion-header .left {
-        font-size: 16px;
-        line-height: 20px;
-    }
-
     .arrow svg {
         width: 20px;
         height: 20px;
     }
 
+    .accordion-item {
+        margin-bottom: 20px;
+    }
+
+    .accordion-header .left {
+        font-size: 16px;
+        line-height: 115%;
+    }
+
     .accordion-body .disc {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .top-bar {
         padding: 15px;
         padding-bottom: 0px;
-    } 
+    }
 
     .mn-header .logo {
         max-width: 160px;
@@ -2481,12 +2510,8 @@ label {
         margin-top: -20px;
     }
 
-    .subs-inner {
-        padding: 40px 15px;
-    }
-
     .subs-inner .sec-title {
-        font-size: 34px;
+        font-size: 40px;
     }
 
     .subs-inner .sec-title .editor {
@@ -2562,11 +2587,15 @@ label {
     }
 
     .disc {
-        font-size: 14px !important;
+        font-size: 16px !important;
+    }
+
+    .fs-title {
+        font-size: 40px !important;
     }
 
     .sec-title {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .bf-title {
@@ -2574,9 +2603,29 @@ label {
         padding: 8px;
     }
 
-    .subs-inner .fr-button {
+    .subs-inner .fr-button,
+    .testimonials-sec .fr-button,
+    .get-in-touch-sec .fr-button {
         width: 100%;
-        padding: 15px 12px;
+        padding: 20px 12px;
+        font-size: 16px !important;
+    }
+
+    .testimonials-sec .fr-button {
+        width: fit-content;
+        padding: 20px 70px;
+    }
+
+    .bottom-form-holder .right-info a.fr-button {
+        width: fit-content;
+        padding: 20px 40px;
+    }
+
+    .subs-inner .fr-button img,
+    .testimonials-sec .fr-button img,
+    .get-in-touch-sec .fr-button img {
+        max-width: 32px;
+        height: 32px;
     }
 
     .hr-inner {
@@ -2672,5 +2721,14 @@ label {
 
     .footer-top {
         grid-template-columns: 1fr;
+    }
+
+    .trust-cl h5 {
+        font-size: 14px;
+    }
+
+    .trust-cl img {
+        max-width: 22px;
+        height: 22px;
     }
 }
