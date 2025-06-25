@@ -1953,10 +1953,6 @@ label {
         font-size: 18px;
     }
 
-    .hero-sec {
-        padding: 80px 0px !important;
-    }
-
     .hr-inner {
         gap: 40px;
     }
@@ -2004,6 +2000,10 @@ label {
 
     .ex-bottom .serv-box {
         width: 50%;
+    }
+
+    #services .ex-bottom .serv-box {
+        max-width: calc(100% / 2 - 30px) !important;
     }
 
     .ex-bottom .serv-box .right-cntn {
@@ -2160,6 +2160,14 @@ label {
 }
 
 @media (max-width: 768px) {
+    .hero-sec .hr-left {
+        max-width: 100%;
+    }
+
+    .hero-sec .hr-right {
+        max-width: 100%;
+    }
+
     .floating-whatsapp {
         width: 50px;
         height: 50px;
@@ -2225,10 +2233,6 @@ label {
         font-size: 12px;
     }
 
-    .hero-sec {
-        padding: 60px 0px !important;
-    }
-
     .hr-inner {
         flex-direction: column;
         gap: 50px;
@@ -2257,11 +2261,13 @@ label {
         width: 100%;
     }
 
-    .ex-bottom .serv-title {
+    .ex-bottom .serv-title,
+    .wcu-card h3.jk {
         font-size: 24px;
     }
 
-    .ex-bottom .serv-disc {
+    .ex-bottom .serv-disc,
+    .wcu-card h3.serv-disc {
         font-size: 14px;
     }
 
@@ -2386,6 +2392,51 @@ label {
 }
 
 @media (max-width: 575px) {
+
+    .hero-sec .hr-left {
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .hero-sec .hr-left .fs-title {
+        margin: 0;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero-sec .serv-btn {
+        font-size: 14px;
+    }
+
+    .hero-sec .serv-btn img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .serv-platform img {
+        max-width: 45px;
+        height: 45px;
+    }
+
+    .hero-sec .disc {
+        text-align: center;
+    }
+
+    .hero-sec .sec-form form {
+        padding: 32px;
+    }
+
+    .sec-form form h3 {
+        font-size: 18px;
+    }
+
+    .sec-form form .field-row {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
     .get-in-touch-sec .my-container {
         max-width: 100%;
         padding: 0;
@@ -2402,7 +2453,7 @@ label {
         border-radius: 0;
     }
 
-    .sec-form form {
+    .get-in-touch-sec .sec-form form {
         padding: 50px 20px;
         border-radius: 0;
     }
