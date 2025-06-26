@@ -5,9 +5,9 @@ var swiper = new Swiper(".mySwiper", {
     loop: true,
     centeredSlides: true,
     speed: 800,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
     },
 });
 

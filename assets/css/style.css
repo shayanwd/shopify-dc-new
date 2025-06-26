@@ -274,6 +274,7 @@ body {
 
 header .fr-button {
     height: 100%;
+    white-space: nowrap;
 }
 
 .fr-button {
@@ -758,6 +759,7 @@ header .fr-button {
     height: max-content;
     transition: color .4s ease-in;
     flex: 1;
+    height: auto;
 }
 
 .migrate-card-holder.wk-bottom .wk-box {
@@ -836,8 +838,9 @@ header .fr-button {
     color: #1C1C1CCC;
     font-family: Plus Jakarta Sans;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
+    letter-spacing: -0.5px;
 }
 
 .pr-bottom .pr-box:nth-child(2) {
@@ -959,7 +962,8 @@ header .fr-button {
 
 .subs-inner .fr-button {
     width: fit-content;
-    padding: 20px 64px;
+    padding: 20px 40px;
+    min-width: 286px;
 }
 
 
@@ -1825,25 +1829,38 @@ label {
 
 
 
+.wcu-flexed .wcu-card {
+    position: relative;
+}
+
+
 .bd-green-wcu {
     border-color: #95BF4780;
     position: relative;
 }
 
-.bd-green-wcu::before {
+.about-work-sec .wcu-flexed .wcu-card:nth-child(1)::before {
     content: '';
     position: absolute;
     top: -4px;
     left: -4px;
     width: 74px;
     height: 74px;
-    background-color: #95BF47;
-    border-top-left-radius: 20px;
+    border-top-left-radius: 23px;
+    border-top: 4px solid #95BF47;
+    border-left: 4px solid #95BF47;
 }
 
-.bd-green-wcu:nth-child(5):before {
+.about-work-sec .wcu-flexed .wcu-card:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    top: -4px;
     right: -4px;
-    bottom: -4px;
+    width: 74px;
+    height: 74px;
+    border-top-right-radius: 23px;
+    border-top: 4px solid #95BF47;
+    border-right: 4px solid #95BF47;
 }
 
 .bd-blue-wcu {
@@ -1851,7 +1868,7 @@ label {
     border-color: #567BFF80;
 }
 
-.bd-blue-wcu::before {
+.about-work-sec .wcu-flexed .wcu-card:nth-child(2)::before {
     content: '';
     position: absolute;
     top: -4px;
@@ -1863,7 +1880,65 @@ label {
     background-color: #567BFF;
 }
 
+.about-work-sec .wcu-flexed .wcu-card:nth-child(5)::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 98px;
+    height: 4px;
+    background-color: #95BF47;
+}
 
+.about-work-sec .wcu-flexed .wcu-card:nth-child(4)::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: -4px;
+    width: 74px;
+    height: 74px;
+    border-bottom-left-radius: 23px;
+    border-bottom: 4px solid #567BFF;
+    border-left: 4px solid #567BFF;
+}
+
+.about-work-sec .wcu-flexed .wcu-card:nth-child(6)::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    width: 74px;
+    height: 74px;
+    border-bottom-right-radius: 23px;
+    border-bottom: 4px solid #567BFF;
+    border-right: 4px solid #567BFF;
+}
+
+.ex-bottom .serv-box a span {
+    height: 16px;
+    width: 16px;
+    display: inline-flex;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    font-size: 0px;
+    vertical-align: middle;
+    margin: 0px 0 2px 8px;
+    background-image: url(../images/icons/go-green.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.ex-bottom .serv-box.grad a span {
+    background-image: url(../images/icons/go.svg);
+    filter: invert(1);
+}
+
+.swiper-scrollbar {
+    display: none;
+}
 
 @media (max-width: 1220px) {
     .top-bar li a span {
@@ -1992,6 +2067,11 @@ label {
     .ex-bottom .serv-box a {
         display: inline-flex;
         gap: 10px;
+        align-items: center;
+    }
+
+    .ex-bottom .serv-box a span {
+        margin: 0px 0px 0px 0px;
     }
 
     .ex-bottom .serv-box a span {
@@ -2317,7 +2397,7 @@ label {
     }
 
     .mn-header {
-        border-radius: 0px;
+        border-radius: 0px !important;
     }
 
     footer.w-full {
@@ -2343,7 +2423,7 @@ label {
     }
 
     .mn-header {
-        padding: 20px;
+        padding: 20px !important;
     }
 
     .footer-top {
@@ -2392,6 +2472,9 @@ label {
 }
 
 @media (max-width: 575px) {
+    .hero-sec .hr-inner {
+        gap: 60px !important;
+    }
 
     .hero-sec .hr-left {
         justify-content: center;
@@ -2527,10 +2610,6 @@ label {
         font-size: 36px;
     }
 
-    .about-bottom .for-pr-ex .ex-box span {
-        font-size: 10px;
-    }
-
     .btn-boxes {
         flex-wrap: wrap;
         flex-direction: column;
@@ -2545,8 +2624,14 @@ label {
         flex-direction: column;
     }
 
+    #services .ex-bottom .serv-box {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
     .ex-bottom .serv-box {
-        width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
     .pr-bottom .pr-box,
@@ -2597,7 +2682,7 @@ label {
     }
 
     .ft-left img.footer-logo {
-        max-width: 260px;
+        max-width: 230px;
     }
 
     .fr-button {
@@ -2646,7 +2731,7 @@ label {
     }
 
     .sec-title {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .bf-title {
@@ -2782,4 +2867,348 @@ label {
         max-width: 22px;
         height: 22px;
     }
+
+
+
+
+
+
+    /* R CSS 575 */
+    .hero-sec .sec-title .editor.big {
+        font-size: 40px !important;
+        line-height: 110%;
+    }
+
+    .hero-sec .sec-title {
+        font-size: 30px !important;
+        line-height: 110% !important;
+    }
+
+    .c-ico::after {
+        width: 25px;
+        height: 25px;
+    }
+
+    .hero-sec .disc {
+        font-size: 14px !important;
+        max-width: 350px;
+    }
+
+    .about-sec {
+        padding: 60px 0px !important;
+    }
+
+    .about-sec::before {
+        width: 781px;
+        height: 458px;
+        left: -400px;
+    }
+
+    .about-sec::after {
+        opacity: 0;
+    }
+
+    .bf-title {
+        padding: 13px !important;
+    }
+
+    .about-top p.disc {
+        font-size: 12px !important;
+        letter-spacing: -0.3px;
+    }
+
+    .about-bottom .for-pr-ex {
+        grid-template-columns: 100% !important;
+        gap: 30px;
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .about-top {
+        margin-bottom: 20px;
+    }
+
+    .about-bottom .for-pr-ex .ex-box h3 {
+        font-size: 26px;
+    }
+
+    .about-bottom a.fr-button {
+        padding: 22px 33px !important;
+        border-radius: 20px;
+        font-size: 16px;
+    }
+
+    .about-bottom a.fr-button img {
+        max-width: 32px;
+        height: 32px;
+    }
+
+    .expert-sec .sec-title {
+        margin-bottom: 12px;
+    }
+
+    .expert-sec p.disc {
+        font-size: 12px !important;
+        letter-spacing: -0.3px;
+    }
+
+    .expert-sec .ex-top {
+        margin-bottom: 16px;
+    }
+
+    #services .ex-bottom .serv-box {
+        padding: 16px !important;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .ex-bottom .serv-box .left-img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .ex-bottom .serv-box .left-img img {
+        width: 100% !important;
+        max-width: 100%;
+        aspect-ratio: 100/90;
+        display: block !important;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .ex-bottom .serv-icon {
+        height: 30px;
+        width: 30px;
+        padding: 7px;
+        margin-bottom: 6px;
+    }
+
+    .ex-bottom .serv-title {
+        font-size: 18px;
+        line-height: 110%;
+        letter-spacing: -0.5px;
+        margin-bottom: 4px !important;
+    }
+
+    .ex-bottom .serv-disc {
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: -0.3px;
+        margin-bottom: 8px;
+    }
+
+    .ex-bottom>.flex {
+        gap: 14px;
+        margin-bottom: 14px !important;
+        margin-top: 14px !important;
+    }
+
+    .expert-sec {
+        padding-bottom: 30px !important;
+    }
+
+    .work-sec {
+        padding: 30px 0px !important;
+    }
+
+    .work-direct span {
+        font-size: 12px;
+        padding: 10px;
+        min-width: 112px;
+        text-align: center;
+    }
+
+    .work-direct:has(img) span {
+        min-width: unset;
+    }
+
+    .work-sec .sec-title {
+        margin-bottom: 12px;
+    }
+
+    .wk-top p.disc {
+        font-size: 12px !important;
+    }
+
+    .wk-top {
+        margin-bottom: 30px;
+    }
+
+    .wk-bottom .wk-box .servic-list {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .wk-bottom .wk-box:has(.grad-bg) .wk-title {
+        margin-bottom: 12px !important;
+        background: #E1E1E1;
+    }
+
+
+    .wk-box.grad-bg .wk-cost-inner {
+        margin-top: 0px !important;
+        margin-bottom: 9px !important;
+    }
+
+    a.fr-button {
+        padding: 22px 33px !important;
+        border-radius: 20px;
+        font-size: 16px;
+    }
+
+    a.fr-button img {
+        max-width: 32px;
+        height: 32px;
+    }
+
+    .work-sec a.fr-button {
+        margin-top: 30px;
+    }
+
+    .wcu-flexed .wcu-card::before {
+        display: none;
+    }
+
+    .wcu-flexed:has(.wcu-card) {
+        gap: 10px;
+    }
+
+    .wcu-flexed .wcu-card {
+        max-width: calc(100% / 1 - 5px) !important;
+        gap: 10px;
+    }
+
+    .wcu-card img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .wcu-card h3.jk {
+        font-size: 18px;
+        line-height: 110%;
+        margin-bottom: 4px;
+        letter-spacing: -0.5px;
+    }
+
+    .wcu-card p {
+        font-size: 12px !important;
+        line-height: 120% !important;
+    }
+
+    .work-sec.home-work-sec {
+        padding-bottom: 60px !important;
+    }
+
+    .appoint-sec {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .appoint-sec .sec-title {
+        font-size: 26px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .appoint-sec .fr-button {
+        min-width: 260px;
+    }
+
+    .pricing-sec .sec-title {
+        margin-bottom: 12px !important;
+    }
+
+    .pricing-sec p.disc {
+        font-size: 12px !important;
+        letter-spacing: -0.4px !important;
+    }
+
+    .pricing-sec .pr-top {
+        margin-bottom: 16px !important;
+    }
+
+    .industries .for-pr-ex {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        gap: 16px !important;
+        justify-content: center !important;
+        margin-bottom: 30px !important;
+    }
+
+    .industries .for-pr-ex .ex-box {
+        width: 100% !important;
+        flex: 1;
+        flex-basis: calc(100% / 2 - 8px);
+    }
+
+    .industries .about-bottom .for-pr-ex img {
+        max-width: 42px;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+    }
+
+    .industries .for-pr-ex .ex-box:first-child img {
+        transform: scale(1.4);
+    }
+
+    .industries .about-bottom .for-pr-ex .ex-box span {
+        font-size: 12px;
+        letter-spacing: -0.3px;
+    }
+
+    .swiper-scrollbar {
+        display: block;
+        position: relative !important;
+        opacity: 1 !important;
+        height: 8px !important;
+        width: 111px !important;
+        margin: 20px auto 0px;
+        top: unset !important;
+        bottom: unset !important;
+        background: hsl(0deg 0% 35.29% / 14%);
+    }
+
+    .swiper-scrollbar .swiper-scrollbar-drag {
+        background: #95BF47;
+    }
+
+    .trust-cl {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .subs-sec {
+        padding-top: 80px !important;
+    }
+
+    .subs-inner .sec-title {
+        font-size: 30px !important;
+    }
+
+    .subs-inner .disc {
+        font-size: 14px !important;
+    }
+
+    .subs-inner {
+        background-size: 130% 100% !important;
+    }
+
+    .subs-inner .fr-button {
+        width: 100% !important;
+    }
+
+    .subs-inner .btn-boxes {
+        width: 100%;
+    }
+
+    .ft-left form button {
+        padding: 20px 23px;
+        font-size: 14px;
+    }
+
 }
