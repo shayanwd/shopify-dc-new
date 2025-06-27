@@ -1970,6 +1970,10 @@ label {
     .bottom-form-holder .right-info:before {
         bottom: -75px;
     }
+
+    .abt-hero .sec-title .editor {
+        font-size: 70px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -2001,6 +2005,10 @@ label {
 
     .sec-title,
     .sec-title .editor {
+        font-size: 55px;
+    }
+
+    .abt-hero .sec-title .editor {
         font-size: 55px;
     }
 
@@ -2237,6 +2245,67 @@ label {
     .wk-bottom .wk-box .wk-cost-inner .disc {
         font-size: 15px !important;
     }
+
+    .hero-sec.abt-hero {
+        padding: 80px 0px !important;
+    }
+
+    .trusted-sec {
+        padding-bottom: 80px !important;
+    }
+
+    .mq-parent {
+        --spc: 90px;
+    }
+
+    .mq-inner .trust-ico {
+        height: 40px !important;
+    }
+
+    .vm-sec {
+        padding: 80px 0px !important;
+    }
+
+    .vm-title {
+        gap: 14px !important;
+    }
+
+    .wcu-card h3 {
+        font-size: 26px;
+    }
+
+    .about-why-choose-sec {
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+    }
+
+    .wcu-grid {
+        gap: 20px !important;
+    }
+
+    .about-sec {
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+    }
+
+    .about-what-we-do-sec {
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+    }
+
+    .about-how-it-works-sec {
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+    }
+
+    .our-leaders-sec {
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+    }
+
+    .subs-inner .sec-title .editor {
+        font-size: inherit;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2389,7 +2458,7 @@ label {
     }
 
     .top-bar {
-        display: none;
+        display: none !important;
     }
 
     header.sticky {
@@ -2468,6 +2537,58 @@ label {
 
     .bottom-form-holder .right-info ul li a span {
         font-size: 14px;
+    }
+
+    .abt-hero .hr-left {
+        gap: 20px !important;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .abt-hero .hr-inner {
+        grid-template-columns: 100% !important;
+    }
+
+    .abtc-img {
+        margin: 0 auto;
+    }
+
+    .trusted-sec .sec-title .editor {
+        font-size: inherit;
+    }
+
+    .vm-title {
+        gap: 16px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .vm-ico img {
+        height: 50px !important;
+        width: 50px !important;
+    }
+
+    .vm-title h3 {
+        font-size: 28px;
+    }
+
+    .vm-cntnt p {
+        font-size: 16px !important;
+        letter-spacing: -0.3px !important;
+    }
+
+    .vm-cntnt {
+        gap: 30px !important;
+    }
+
+    .vm-cntnt .fr-button {
+        max-width: 229px !important;
+    }
+
+    .btn-boxes a {
+        padding: 20px 15px !important;
     }
 }
 
@@ -2880,7 +3001,7 @@ label {
     }
 
     .hero-sec .sec-title {
-        font-size: 30px !important;
+        font-size: 40px !important;
         line-height: 110% !important;
     }
 
@@ -3016,7 +3137,7 @@ label {
     .work-direct span {
         font-size: 12px;
         padding: 10px;
-        min-width: 112px;
+        min-width: 82px;
         text-align: center;
     }
 
@@ -3095,6 +3216,7 @@ label {
     .wcu-card p {
         font-size: 12px !important;
         line-height: 120% !important;
+        letter-spacing: -0.3px !important;
     }
 
     .work-sec.home-work-sec {
@@ -3209,6 +3331,104 @@ label {
     .ft-left form button {
         padding: 20px 23px;
         font-size: 14px;
+    }
+
+    .hero-sec.abt-hero .hr-inner {
+        gap: 40px !important;
+    }
+
+    .work-direct span {}
+
+    .abt-hero .hr-left {
+        gap: 10px !important;
+    }
+
+    .abt-hero .sec-title .editor {
+        font-size: inherit;
+    }
+
+    .hero-sec.abt-hero .sec-title {
+        margin-bottom: 4px;
+    }
+
+    .hero-sec.abt-hero .serv-btn {
+        margin-top: 10px;
+    }
+
+    .trusted-sec .sec-title {
+        margin-bottom: 20px;
+    }
+
+    .mq-parent {
+        --spc: 40px;
+    }
+
+    .mq-inner .trust-ico {
+        height: 25px !important;
+    }
+
+    .trusted-sec {
+        padding-bottom: 60px !important;
+    }
+
+    .vm-sec {
+        padding: 60px 0px !important;
+    }
+
+    .vm-cntnt p {
+        font-size: 14px !important;
+    }
+
+    .vm-cntnt .fr-button {
+        max-width: 239px !important;
+    }
+
+    .vm-grid {
+        gap: 20px !important;
+    }
+
+    .about-why-choose-sec .wk-top {
+        margin-bottom: 24px;
+    }
+
+    .wcu-grid {
+        grid-template-columns: 100% !important;
+    }
+
+    .wcu-grid .wcu-card {
+        gap: 10px !important;
+    }
+
+    .about-why-choose-sec {
+        padding: 60px 0px !important;
+    }
+
+    .about-what-we-do-sec {
+        padding-top: 60px !important;
+    }
+
+    .about-work-sec .wcu-flexed .wcu-card {
+        width: 100% !important;
+        flex-basis: 100% !important;
+        max-width: 380px !important;
+    }
+
+    .about-work-sec .wcu-flexed .wcu-card div>img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .about-work-sec .wcu-flexed .wcu-card h3.jk {
+        font-size: 24px !important;
+    }
+
+    .about-work-sec .wcu-flexed .wcu-card a {
+        font-size: 12px;
+    }
+
+    .leaders-grid h3.jk {
+        margin-bottom: 4px;
     }
 
 }
