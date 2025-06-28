@@ -1947,6 +1947,19 @@ label {
     display: none;
 }
 
+ul.wbg {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+}
+
+ul.wbg li {
+    padding: 14px 16px !important;
+    border: 3px solid hsl(0deg 0% 8.63% / 16%);
+    border-radius: 12px !important;
+    background: #fff;
+}
+
 @media (max-width: 1220px) {
     .top-bar li a span {
         font-size: 14px;
@@ -3457,4 +3470,62 @@ label {
     .hero-ctas {
         width: 100%;
     }
+
+
+
+
+    .policy-sec {
+        padding: 60px 0 0;
+    }
+    
+    .policy-sec + .subs-sec {
+        padding-top: 70px !important;
+    }
+    
+    .policy-sec .sec-title {
+        font-size: 40px !important;
+    }
+     
+    
+    .policy-sec .pr-top .disc {
+        font-size: 14px !important;
+    }
+
+    .policy-inner {
+        margin-top: 60px !important;
+        gap: 40px !important;
+    }
+    
+    .policy-inner .cntn {
+        gap: 10px !important;
+    }
+    
+    .policy-inner .cntn .disc {
+        font-size: 16px !important;
+    }
+    
+    .policy-inner .cntn .disc:last-child {
+        margin-bottom: 0px;
+    }
+    
+    .policy-sec .disc-cntn :is(ul, ol) {
+        gap: 18px !important;
+    }
+    
+    .subs-inner {
+        padding: 50px 20px !important;
+    }
+
+    .policy-sec .disc-cntn  ul.wbg {
+        gap: 10px !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+    }
+    
+    ul.wbg li a {
+        gap: 8px !important;
+        letter-spacing: -0.7px !important;
+    } 
+
 }
