@@ -1,3 +1,7 @@
+AOS.init({
+    anchorPlacement: 'bottom-bottom' // Makes animations trigger from bottom of viewport
+});
+
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 4,
     slidesPerView: "auto",

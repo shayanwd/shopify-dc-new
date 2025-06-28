@@ -541,7 +541,8 @@ header .fr-button {
     line-height: 90%;
     color: #FFFFFF;
 }
-.portfolio-inner .work-direct span{
+
+.portfolio-inner .work-direct span {
     font-size: 16px;
 }
 
@@ -1960,6 +1961,16 @@ ul.wbg li {
     background: #fff;
 }
 
+.wcu-flexed.stretched-cards .wcu-card {
+    max-width: 100% !important;
+    flex-basis: calc(100% / 3 - 20px);
+}
+
+.port-title {
+    font-weight: 400 !important;
+    font-style: normal;
+}
+
 @media (max-width: 1220px) {
     .top-bar li a span {
         font-size: 14px;
@@ -2318,6 +2329,15 @@ ul.wbg li {
     .subs-inner .sec-title .editor {
         font-size: inherit;
     }
+
+    .sec-title.st-service {
+        width: 100% !important;
+    }
+
+    .wcu-flexed.stretched-cards .wcu-card {
+        max-width: 100% !important;
+        flex-basis: calc(100% / 2 - 20px) !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2597,6 +2617,12 @@ ul.wbg li {
 
     .btn-boxes a {
         padding: 20px 15px !important;
+    }
+
+    .subs-inner .mg-subs-btns .fr-button {
+        min-width: auto !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
     }
 }
 
@@ -3477,16 +3503,16 @@ ul.wbg li {
     .policy-sec {
         padding: 60px 0 0;
     }
-    
-    .policy-sec + .subs-sec {
+
+    .policy-sec+.subs-sec {
         padding-top: 70px !important;
     }
-    
+
     .policy-sec .sec-title {
         font-size: 40px !important;
     }
-     
-    
+
+
     .policy-sec .pr-top .disc {
         font-size: 14px !important;
     }
@@ -3495,37 +3521,46 @@ ul.wbg li {
         margin-top: 60px !important;
         gap: 40px !important;
     }
-    
+
     .policy-inner .cntn {
         gap: 10px !important;
     }
-    
+
     .policy-inner .cntn .disc {
         font-size: 16px !important;
     }
-    
+
     .policy-inner .cntn .disc:last-child {
         margin-bottom: 0px;
     }
-    
+
     .policy-sec .disc-cntn :is(ul, ol) {
         gap: 18px !important;
     }
-    
+
     .subs-inner {
         padding: 50px 20px !important;
     }
 
-    .policy-sec .disc-cntn  ul.wbg {
+    .policy-sec .disc-cntn ul.wbg {
         gap: 10px !important;
         flex-direction: column !important;
         justify-content: flex-start !important;
         align-items: flex-start !important;
     }
-    
+
     ul.wbg li a {
         gap: 8px !important;
         letter-spacing: -0.7px !important;
-    } 
+    }
+
+    .mg-subs-sec .subs-inner .fr-button {
+        min-width: 100% !important;
+    }
+
+    .wcu-flexed.stretched-cards .wcu-card {
+        max-width: 100% !important;
+        flex-basis: calc(100% / 1 - 20px) !important;
+    }
 
 }
