@@ -40,272 +40,17 @@
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
-    <style>
-        /* Hamburger Menu Styles */
-        .hamburger-menu {
-            width: 30px;
-            height: 20px;
-            position: relative;
-            cursor: pointer;
-            z-index: 100000;
-        }
 
-        .hamburger-menu span {
-            display: block;
-            position: absolute;
-            height: 2px;
-            width: 100%;
-            background: #fff;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger-menu span:nth-child(1) {
-            top: 0;
-        }
-
-        .hamburger-menu span:nth-child(2) {
-            top: 9px;
-        }
-
-        .hamburger-menu span:nth-child(3) {
-            top: 18px;
-        }
-
-        /* Active state for hamburger menu */
-        .hamburger-menu.active span:nth-child(1) {
-            transform: rotate(45deg);
-            top: 9px;
-        }
-
-        .hamburger-menu.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger-menu.active span:nth-child(3) {
-            transform: rotate(-45deg);
-            top: 9px;
-        }
-
-        /* Desktop Navigation Styles */
-        .nav-menu {
-            display: block;
-        }
-
-        .nav-menu ul {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .nav-menu .group ul {
-            position: absolute;
-            left: 0;
-            top: 100%;
-            width: 280px;
-            background: white;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            border-radius: 12px;
-            padding: 12px 0;
-            display: none;
-            opacity: 0;
-            transform: translateY(-10px);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            z-index: 1000;
-        }
-
-        .nav-menu .group ul.show {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .nav-menu .group ul li {
-            margin: 0;
-        }
-
-        .nav-menu .group ul li a {
-            display: block;
-            padding: 12px 20px;
-            color: #1c1c1c !important;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: all 0.2s ease;
-            border-radius: 8px;
-            margin: 0 8px;
-        }
-
-        .nav-menu .group ul li a:hover {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            color: #007bff !important;
-            transform: translateX(4px);
-        }
-
-        .nav-menu .group>a {
-            position: relative;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .nav-menu .group>a::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 4px solid transparent;
-            border-right: 4px solid transparent;
-            border-top: 4px solid currentColor;
-            transition: transform 0.3s ease;
-            margin-left: 4px;
-        }
-
-        .nav-menu .group.active>a::after {
-            transform: rotate(180deg);
-        }
-
-        .nav-menu .group>a:hover::after {
-            border-top-color: #007bff;
-        }
-
-        .hide-resp {
-            display: none;
-        }
-
-        /* Mobile Menu Styles */
-        @media (min-width: 1200px) {
-            .hamburger-menu {
-                display: none !important;
-            }
-
-            .show-resp {
-                display: none;
-            }
-
-            .hide-resp {
-                display: block;
-            }
-        }
-
-        @media (max-width: 1200px) {
-            .hamburger-menu {
-                display: block !important;
-                width: 30px;
-                height: 20px;
-                position: relative;
-                cursor: pointer;
-                z-index: 100000;
-                background: transparent;
-                border: none;
-                padding: 0;
-            }
-
-            .hamburger-menu span {
-                display: block;
-                position: absolute;
-                height: 2px;
-                width: 100%;
-                background: #fff;
-                border-radius: 2px;
-                transition: all 0.3s ease;
-            }
-
-            .hamburger-menu span:nth-child(1) {
-                top: 0;
-            }
-
-            .hamburger-menu span:nth-child(2) {
-                top: 9px;
-            }
-
-            .hamburger-menu span:nth-child(3) {
-                top: 18px;
-            }
-
-            .hamburger-menu.active span:nth-child(1) {
-                transform: rotate(45deg);
-                top: 9px;
-            }
-
-            .hamburger-menu.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger-menu.active span:nth-child(3) {
-                transform: rotate(-45deg);
-                top: 9px;
-            }
-
-            .nav-menu {
-                position: fixed;
-                top: 0;
-                left: -100%;
-                width: 300px;
-                height: 100%;
-                background: #161616;
-                transition: all 0.3s ease;
-                z-index: 99999;
-                padding-top: 80px;
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-
-            .nav-menu.active {
-                left: 0;
-            }
-
-            .nav-menu ul {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 20px;
-            }
-
-            .nav-menu .group ul {
-                position: static;
-                width: 100%;
-                background: transparent;
-                box-shadow: none;
-                padding: 0;
-                margin-top: 10px;
-                display: none;
-            }
-
-            .nav-menu .group ul.active {
-                display: block;
-            }
-
-            .nav-menu .group ul li a {
-                color: #fff !important;
-            }
-
-            .nav-overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.5);
-                z-index: 99998;
-                display: none;
-            }
-
-            .nav-overlay.active {
-                display: block;
-            }
-        }
-    </style>
 
 </head>
 
 <body>
-    <div class="top-bar p-[20px] flex justify-between items-center pb-[0px]">
+    <div class="top-bar p-[20px] flex justify-between items-center lg:pb-[0px] ">
         <div class="left">
             <ul>
                 <li>
@@ -376,7 +121,11 @@
                                         class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Store
                                         Migration</a>
                                 </li>
-                                <li><a href="shopify-app-development.html"
+                                <li><a href="shopify-maintenance-services-in-singapore.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Maintenance
+                                        & Support</a>
+                                </li>
+                                <li><a href="shopify-app-development-services.html"
                                         class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify App
                                         Development</a></li>
                                 <li><a href="shopify-speed-optimization-services.html"
@@ -385,10 +134,19 @@
                                 <li><a href="shopify-theme-development-services.html"
                                         class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Theme
                                         Development</a></li>
+                                <li><a href="shopify-store-setup-services.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Store
+                                        Setup</a></li>
+                                <li><a href="shopify-theme-customization.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Theme
+                                        Customization</a></li>
+                                <li><a href="shopify-web-design-services.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Web
+                                        Design</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Previous Work</a>
+                            <a href="portfolio.html">Previous Work</a>
                         </li>
                         <li>
                             <a href="/#reviews" class="flex items-center gap-[4px]">
@@ -702,7 +460,7 @@
                                 improvements—all under one roof.
                             </p>
 
-                            <a href="shopify-theme-development.html"
+                            <a href="shopify-theme-development-services.html"
                                 class="inline-block transition-all duration-300 hover:text-[#007bff] group">
                                 View Details
                                 <span
@@ -723,7 +481,7 @@
                             and essential configurations.
                         </p>
 
-                        <a href="shopify-store-setup.html"
+                        <a href="shopify-store-setup-services.html"
                             class="inline-block transition-all duration-300 hover:text-[#007bff] group">
                             View Details
                             <span
@@ -797,7 +555,7 @@
                                 ongoing support.
                             </p>
 
-                            <a href="shopify-store-setup.html"
+                            <a href="shopify-store-setup-services.html"
                                 class="inline-block transition-all duration-300 hover:text-[#007bff] group">
                                 View Details
                                 <span
@@ -817,7 +575,7 @@
                             Continuous store updates, performance enhancements, and technical maintenance.
                         </p>
 
-                        <a href="shopify-maintenance.html"
+                        <a href="shopify-maintenance-services-in-singapore.html"
                             class="inline-block transition-all duration-300 hover:text-[#007bff] group">
                             View Details
                             <span
@@ -839,7 +597,7 @@
                             processes, and create unique customer experiences.
                         </p>
 
-                        <a href="shopify-app-development.html"
+                        <a href="shopify-app-development-services.html"
                             class="inline-block transition-all duration-300 hover:text-[#007bff] group">
                             View Details
                             <span
@@ -880,7 +638,7 @@
                             and reflects your brand.
                         </p>
 
-                        <a href="shopify-web-design.html"
+                        <a href="shopify-web-design-services.html"
                             class="inline-block transition-all duration-300 hover:text-[#007bff] group">
                             View Details
                             <span
@@ -1748,7 +1506,7 @@
                                 <a href="about-us.html">About Us</a>
                             </li>
                             <li>
-                                <a href="/#services">Services</a>
+                                <a href="services.html">Services</a>
                             </li>
                             <li>
                                 <a href="portfolio.html">Previous Work</a>
@@ -1816,7 +1574,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
     <!-- Initialize Swiper -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
     <script src="assets/js/custom.js" defer></script>
 

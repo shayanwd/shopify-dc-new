@@ -5,10 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portfolio | Shopify Developers Company | Customized Shopify Solutions </title>
+
+    <title>Portfolio | Successful Shopify Store Examples & Case Studies | Shopify Developers Company</title>
+
+    <meta name="description"
+        content="Explore our portfolio of successful Shopify stores. See real examples of custom themes, apps, and eCommerce solutions we've built for Singapore businesses. View our case studies.">
+    <meta name="keywords"
+        content="Shopify portfolio, Shopify case studies, eCommerce portfolio, Shopify store examples, custom Shopify designs, Singapore Shopify stores, Shopify success stories, eCommerce case studies, Shopify website portfolio, Singapore eCommerce examples">
+    <meta name="author" content="Shopify Developers Company">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- Enhanced Open Graph Meta Tags -->
+    <meta property="og:title" content="Portfolio | Successful Shopify Store Examples & Case Studies">
+    <meta property="og:description"
+        content="Browse our portfolio showcasing successful Shopify stores, custom themes and eCommerce solutions we've delivered for Singapore businesses. Real results, real success stories.">
+    <meta property="og:url" content="https://www.shopifydeveloperscompany.com/portfolio">
+    <meta property="og:image" content="https://www.shopifydeveloperscompany.com/assets/images/og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_SG">
+    <meta property="og:site_name" content="Shopify Developers Company">
 
     <!-- Favicon and Theme Meta Tags -->
     <link rel="icon" href="assets/images/icons/favicon.webp" type="image/x-icon">
+
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,214 +48,14 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 
 
-    <style>
-        /* Hamburger Menu Styles */
-        .hamburger-menu {
-            width: 30px;
-            height: 20px;
-            position: relative;
-            cursor: pointer;
-            z-index: 100000;
-        }
-
-        .hamburger-menu span {
-            display: block;
-            position: absolute;
-            height: 2px;
-            width: 100%;
-            background: #fff;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger-menu span:nth-child(1) {
-            top: 0;
-        }
-
-        .hamburger-menu span:nth-child(2) {
-            top: 9px;
-        }
-
-        .hamburger-menu span:nth-child(3) {
-            top: 18px;
-        }
-
-        /* Active state for hamburger menu */
-        .hamburger-menu.active span:nth-child(1) {
-            transform: rotate(45deg);
-            top: 9px;
-        }
-
-        .hamburger-menu.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger-menu.active span:nth-child(3) {
-            transform: rotate(-45deg);
-            top: 9px;
-        }
-
-        /* Desktop Navigation Styles */
-        .nav-menu {
-            display: block;
-        }
-
-        .nav-menu ul {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .nav-menu .group ul {
-            position: absolute;
-            left: 0;
-            top: 100%;
-            width: 240px;
-            background: white;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border-radius: 0.5rem;
-            padding: 0.5rem 0;
-            display: none;
-        }
-
-        .nav-menu .group:hover ul {
-            display: block;
-        }
-
-        .hide-resp {
-            display: none;
-        }
-
-        /* Mobile Menu Styles */
-        @media (min-width: 1200px) {
-            .hamburger-menu {
-                display: none !important;
-            }
-
-            .show-resp {
-                display: none;
-            }
-
-            .hide-resp {
-                display: block;
-            }
-        }
-
-        @media (max-width: 1200px) {
-            .hamburger-menu {
-                display: block !important;
-                width: 30px;
-                height: 20px;
-                position: relative;
-                cursor: pointer;
-                z-index: 100000;
-                background: transparent;
-                border: none;
-                padding: 0;
-            }
-
-            .hamburger-menu span {
-                display: block;
-                position: absolute;
-                height: 2px;
-                width: 100%;
-                background: #fff;
-                border-radius: 2px;
-                transition: all 0.3s ease;
-            }
-
-            .hamburger-menu span:nth-child(1) {
-                top: 0;
-            }
-
-            .hamburger-menu span:nth-child(2) {
-                top: 9px;
-            }
-
-            .hamburger-menu span:nth-child(3) {
-                top: 18px;
-            }
-
-            .hamburger-menu.active span:nth-child(1) {
-                transform: rotate(45deg);
-                top: 9px;
-            }
-
-            .hamburger-menu.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger-menu.active span:nth-child(3) {
-                transform: rotate(-45deg);
-                top: 9px;
-            }
-
-            .nav-menu {
-                position: fixed;
-                top: 0;
-                left: -100%;
-                width: 300px;
-                height: 100%;
-                background: #161616;
-                transition: all 0.3s ease;
-                z-index: 99999;
-                padding-top: 80px;
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-
-            .nav-menu.active {
-                left: 0;
-            }
-
-            .nav-menu ul {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 20px;
-            }
-
-            .nav-menu .group ul {
-                position: static;
-                width: 100%;
-                background: transparent;
-                box-shadow: none;
-                padding: 0;
-                margin-top: 10px;
-                display: none;
-            }
-
-            .nav-menu .group ul.active {
-                display: block;
-            }
-
-            .nav-menu .group ul li a {
-                color: #fff !important;
-            }
-
-            .nav-overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.5);
-                z-index: 99998;
-                display: none;
-            }
-
-            .nav-overlay.active {
-                display: block;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <div class="top-bar p-[20px] flex justify-between items-center">
+    <div class="top-bar p-[20px] flex justify-between items-center lg:pb-[0px] ">
         <div class="left">
             <ul>
                 <li>
-                    <a href="#" class="flex items-center gap-[8px]">
+                    <a href="https://maps.app.goo.gl/wtedNjwqbvGt9Gh89" class="flex items-center gap-[8px]">
                         <img src="/assets/images/icons/map-icon.svg" alt="">
                         <span>190 Woodlands bizhub, #07-17, Singapore 757516</span>
                     </a>
@@ -253,7 +72,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="tel:6582336257" class="flex items-center gap-[8px]">
+                    <a href="tel+6582336257" class="flex items-center gap-[8px]">
                         <img src="/assets/images/icons/ph-icon.svg" alt="">
                         <span>+6582336257</span>
                     </a>
@@ -290,35 +109,48 @@
                 <nav class="nav-menu">
                     <ul class="flex items-center gap-[30px] justify-end">
                         <li>
-                            <a href="/" class="active">Home</a>
+                            <a href="/">Home</a>
                         </li>
                         <li>
-                            <a href="about.html">About Us</a>
+                            <a href="about-us.html">About Us</a>
                         </li>
                         <li class="relative group">
-                            <a href="/#services" class="flex items-center gap-[4px]">Services</a>
+                            <a href="#" class="flex items-center gap-[4px] services-dropdown-trigger">Services</a>
                             <ul
-                                class="absolute left-0 top-[100%] w-48 bg-white shadow-lg rounded-lg py-2 hidden group-hover:block">
+                                class="pointer-events-none opacity-0 translate-y-4 transition-all duration-300 ease-in-out  absolute left-0 top-[100%] w-48 bg-white shadow-lg rounded-lg py-2 hidden group-hover:block services-dropdown">
                                 <li><a href="shopify-store-migration-services.html"
                                         class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Store
                                         Migration</a>
                                 </li>
-                                <li><a href="ux-web.html" class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">UX &
-                                        Web
-                                        Design</a></li>
+                                <li><a href="shopify-maintenance-services-in-singapore.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Maintenance
+                                        & Support</a>
+                                </li>
+                                <li><a href="shopify-app-development-services.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify App
+                                        Development</a></li>
                                 <li><a href="shopify-speed-optimization-services.html"
                                         class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Speed
-                                        Optimization</a></li>
+                                        Optimization </a></li>
                                 <li><a href="shopify-theme-development-services.html"
                                         class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Theme
                                         Development</a></li>
+                                <li><a href="shopify-store-setup-services.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Store
+                                        Setup</a></li>
+                                <li><a href="shopify-theme-customization.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Theme
+                                        Customization</a></li>
+                                <li><a href="shopify-web-design-services.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Web
+                                        Design</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Previous Work</a>
+                            <a href="portfolio.html" class="active">Previous Work</a>
                         </li>
                         <li>
-                            <a href="#reviews" class="flex items-center gap-[4px]">
+                            <a href="/#reviews" class="flex items-center gap-[4px]">
                                 <img src="assets/images/icons/menu-star.svg" alt="">
                                 Reviews
                             </a>
@@ -567,7 +399,7 @@
                     Get started with a flexible monthly plan, submit your Shopify tasks, and
                     receive top-quality results—fast and hassle-free.
                 </p>
-                <a href="#" class="fr-button">
+                <a href="https://calendly.com/shopifydeveloperscompany/30min" target="_blank" class="fr-button">
                     <img src="assets/images/icons/btn-arrow.webp" alt="">
                     Book a Call Now
                 </a>
@@ -577,8 +409,7 @@
 
     <footer class="pt-[302px] w-full">
         <div class="my-container">
-            <div
-                class="footer-top grid grid-cols-[360px_1fr] gap-[40px] pb-[80px] lg:gap-[60px] lg:grid-cols-[430px_1fr]">
+            <div class="footer-top grid gap-[40px] pb-[80px] lg:gap-[60px] lg:grid-cols-[430px_1fr]">
                 <div class="ft-left flex flex-col gap-[50px]">
                     <img class="footer-logo" src="assets/images/Logo.svg" alt="">
 
@@ -588,7 +419,7 @@
                     </form>
 
                     <ul class="flex items-center gap-[16px]">
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <img src="assets/images/icons/facebook.svg" alt="">
                             </a>
@@ -597,7 +428,7 @@
                             <a href="#">
                                 <img src="assets/images/icons/twitter.svg" alt="">
                             </a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="https://www.linkedin.com/company/shopifydevelopmentagency/">
                                 <img src="assets/images/icons/in.svg" alt="">
@@ -622,10 +453,13 @@
                                 <a href="about-us.html">About Us</a>
                             </li>
                             <li>
-                                <a href="/#services">Services</a>
+                                <a href="services.html">Services</a>
                             </li>
                             <li>
-                                <a href="/#services">Previous Work</a>
+                                <a href="portfolio.html">Previous Work</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">FAQs</a>
                             </li>
                             <li>
                                 <a href="Contact-us.html">Contact US</a>
@@ -678,240 +512,17 @@
 
 
 
+    <div class="nav-overlay"></div>
 
 
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
     <!-- Initialize Swiper -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="assets/js/custom.js"></script>
-
-    <script>
-        const headers = document.querySelectorAll('.accordion-header');
-
-        headers.forEach(header => {
-            header.addEventListener('click', () => {
-                const body = header.nextElementSibling;
-                const isOpen = body.classList.contains('open');
-
-                // Close all
-                document.querySelectorAll('.accordion-body').forEach(b => {
-                    b.classList.remove('open');
-                    b.style.maxHeight = null;
-                });
-
-                document.querySelectorAll('.accordion-header').forEach(h => {
-                    h.classList.remove('active');
-                });
-
-                // Open selected
-                if (!isOpen) {
-                    body.classList.add('open');
-                    body.style.maxHeight = body.scrollHeight + 'px';
-                    header.classList.add('active');
-                }
-            });
-        });
-    </script>
-
-    <script>
-        const formmmmm = document.getElementById('contactForm');
-        if (formmmmm) {
-            formmmmm.addEventListener('submit', function (event) {
-                event.preventDefault();
-
-                // Reset any previous error states
-                resetErrorStates();
-
-                // Validate form
-                if (!validateForm()) {
-                    return;
-                }
-
-                // Collect form data
-                const formData = {
-                    firstName: document.getElementById('firstName').value,
-                    lastName: document.getElementById('lastName').value,
-                    email: document.getElementById('email').value,
-                    website: document.getElementById('website').value,
-                    service: document.getElementById('service').value,
-                    budget: document.getElementById('budget').value,
-                    timeline: document.getElementById('timeline').value,
-                    message: document.getElementById('message').value
-                };
-
-                // Send the form data
-                fetch('/rest/contact-form.php', {
-                    method: 'POST',
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Accept": "application/json",
-                    },
-                    body: JSON.stringify(formData)
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.code === "200") {
-                            showMessage('submitSuccessMessage');
-                            document.getElementById('contactForm').reset();
-                        } else {
-                            showMessage('submitErrorMessage');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        showMessage('submitErrorMessage');
-                    });
-            });
-
-            function validateForm() {
-                let isValid = true;
-
-                // Required fields validation
-                const requiredFields = ['firstName', 'email', 'service', 'message'];
-                requiredFields.forEach(field => {
-                    const element = document.getElementById(field);
-                    if (!element.value.trim()) {
-                        showError(element, 'This field is required');
-                        isValid = false;
-                    }
-                });
-
-                // Email validation
-                const email = document.getElementById('email');
-                if (email.value.trim() && !isValidEmail(email.value)) {
-                    showError(email, 'Please enter a valid email address');
-                    isValid = false;
-                }
-
-                // Website URL validation (if provided)
-                const website = document.getElementById('website');
-                if (website.value.trim() && !isValidURL(website.value)) {
-                    showError(website, 'Please enter a valid URL');
-                    isValid = false;
-                }
-
-                return isValid;
-            }
-
-            function isValidEmail(email) {
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return emailRegex.test(email);
-            }
-
-            function isValidURL(url) {
-                try {
-                    new URL(url);
-                    return true;
-                } catch {
-                    return false;
-                }
-            }
-
-            function showError(element, message) {
-                // Add error class to the parent field-row
-                const fieldRow = element.closest('.field-row');
-                fieldRow.classList.add('error');
-
-                // Create or update error message
-                let errorDiv = fieldRow.querySelector('.error-message');
-                if (!errorDiv) {
-                    errorDiv = document.createElement('div');
-                    errorDiv.className = 'error-message';
-                    fieldRow.appendChild(errorDiv);
-                }
-                errorDiv.textContent = message;
-            }
-
-            function resetErrorStates() {
-                // Remove all error states and messages
-                document.querySelectorAll('.field-row.error').forEach(row => {
-                    row.classList.remove('error');
-                    const errorMessage = row.querySelector('.error-message');
-                    if (errorMessage) {
-                        errorMessage.remove();
-                    }
-                });
-            }
-
-            function showMessage(type) {
-                // type: 'submitSuccessMessage' or 'submitErrorMessage'
-                let message = '';
-                let toastClass = '';
-                let icon = '';
-                if (type === 'submitSuccessMessage') {
-                    message = 'Thank you! Your message has been sent successfully.';
-                    toastClass = 'toast-success';
-                    icon = '✅';
-                } else {
-                    message = 'Sorry, there was an error sending your message. Please try again later.';
-                    toastClass = 'toast-error';
-                    icon = '❌';
-                }
-                const toastContainer = document.getElementById('toast-container');
-                const toast = document.createElement('div');
-                toast.className = `toast-message ${toastClass}`;
-                toast.innerHTML = `<span class='toast-icon'>${icon}</span> ${message}`;
-                toastContainer.appendChild(toast);
-                // Remove after animation
-                setTimeout(() => {
-                    toast.remove();
-                }, 5000);
-            }
-        }
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script src="assets/js/custom.js" defer></script>
 
 
-
-
-        // Mobile Menu Toggle
-        const hamburgerMenu = document.querySelector('.hamburger-menu');
-        const navMenu = document.querySelector('.nav-menu');
-        const navOverlay = document.querySelector('.nav-overlay');
-        const servicesLink = document.querySelector('.group > a');
-        const servicesDropdown = document.querySelector('.group > ul');
-
-        function toggleMenu() {
-            hamburgerMenu.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            navOverlay.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-        }
-
-        // Handle mobile menu
-        // if (window.innerWidth <= 1200) {
-        hamburgerMenu.addEventListener('click', toggleMenu);
-        navOverlay.addEventListener('click', toggleMenu);
-
-        // Handle services dropdown in mobile view
-        servicesLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            servicesDropdown.classList.toggle('active');
-        });
-        // }
-
-        // Close menu when clicking on a link
-        const navLinks = document.querySelectorAll('.nav-menu a:not(.group > a)');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 1200) {
-                    toggleMenu();
-                }
-            });
-        });
-
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 1200) {
-                // Reset mobile menu state
-                hamburgerMenu.classList.remove('active');
-                navMenu.classList.remove('active');
-                navOverlay.classList.remove('active');
-                document.body.style.overflow = '';
-                servicesDropdown.classList.remove('active');
-            }
-        });
-    </script>
 
 </body>
 

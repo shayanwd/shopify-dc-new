@@ -15,6 +15,8 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
+
+
 // Counter animation function
 function animateCounter(element, target, duration = 2000) {
     let start = 0;
@@ -154,3 +156,149 @@ window.addEventListener('resize', () => {
 
 
 
+
+
+const formmmmm = document.getElementById('contactForm');
+        if (formmmmm) {
+            formmmmm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                // Reset any previous error states
+                resetErrorStates();
+
+                // Validate form
+                if (!validateForm()) {
+                    return;
+                }
+
+                // Collect form data
+                const formData = {
+                    firstName: document.getElementById('firstName').value,
+                    lastName: document.getElementById('lastName').value,
+                    email: document.getElementById('email').value,
+                    website: document.getElementById('website').value,
+                    service: document.getElementById('service').value,
+                    budget: document.getElementById('budget').value,
+                    timeline: document.getElementById('timeline').value,
+                    message: document.getElementById('message').value
+                };
+
+                // Send the form data
+                fetch('https://dev.frototype.agency/shopifydevelopment/rest/contact-form.php', {
+                    method: 'POST',
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json",
+                    },
+                    body: JSON.stringify(formData)
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.code === "200") {
+                            showMessage('submitSuccessMessage');
+                            document.getElementById('contactForm').reset();
+                        } else {
+                            showMessage('submitErrorMessage');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        showMessage('submitErrorMessage');
+                    });
+            });
+
+            function validateForm() {
+                let isValid = true;
+
+                // Required fields validation
+                const requiredFields = ['firstName', 'email', 'service', 'message'];
+                requiredFields.forEach(field => {
+                    const element = document.getElementById(field);
+                    if (!element.value.trim()) {
+                        showError(element, 'This field is required');
+                        isValid = false;
+                    }
+                });
+
+                // Email validation
+                const email = document.getElementById('email');
+                if (email.value.trim() && !isValidEmail(email.value)) {
+                    showError(email, 'Please enter a valid email address');
+                    isValid = false;
+                }
+
+                // Website URL validation (if provided)
+                const website = document.getElementById('website');
+                if (website.value.trim() && !isValidURL(website.value)) {
+                    showError(website, 'Please enter a valid URL');
+                    isValid = false;
+                }
+
+                return isValid;
+            }
+
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            function isValidURL(url) {
+                try {
+                    new URL(url);
+                    return true;
+                } catch {
+                    return false;
+                }
+            }
+
+            function showError(element, message) {
+                // Add error class to the parent field-row
+                const fieldRow = element.closest('.field-row');
+                fieldRow.classList.add('error');
+
+                // Create or update error message
+                let errorDiv = fieldRow.querySelector('.error-message');
+                if (!errorDiv) {
+                    errorDiv = document.createElement('div');
+                    errorDiv.className = 'error-message';
+                    fieldRow.appendChild(errorDiv);
+                }
+                errorDiv.textContent = message;
+            }
+
+            function resetErrorStates() {
+                // Remove all error states and messages
+                document.querySelectorAll('.field-row.error').forEach(row => {
+                    row.classList.remove('error');
+                    const errorMessage = row.querySelector('.error-message');
+                    if (errorMessage) {
+                        errorMessage.remove();
+                    }
+                });
+            }
+
+            function showMessage(type) {
+                // type: 'submitSuccessMessage' or 'submitErrorMessage'
+                let message = '';
+                let toastClass = '';
+                let icon = '';
+                if (type === 'submitSuccessMessage') {
+                    message = 'Thank you! Your message has been sent successfully.';
+                    toastClass = 'toast-success';
+                    icon = '✅';
+                } else {
+                    message = 'Sorry, there was an error sending your message. Please try again later.';
+                    toastClass = 'toast-error';
+                    icon = '❌';
+                }
+                const toastContainer = document.getElementById('toast-container');
+                const toast = document.createElement('div');
+                toast.className = `toast-message ${toastClass}`;
+                toast.innerHTML = `<span class='toast-icon'>${icon}</span> ${message}`;
+                toastContainer.appendChild(toast);
+                // Remove after animation
+                setTimeout(() => {
+                    toast.remove();
+                }, 5000);
+            }
+        }

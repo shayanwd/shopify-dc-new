@@ -5,20 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shopify Theme Development | Shopify Development Company</title>
+    <title>Shopify Store Setup Services in Singapore </title>
 
 
     <meta name="description"
-        content="Seamless Shopify store migration in Singapore by Shopify Development Company. Secure, fast, and hassle-free transfer from any platform to Shopify.">
+        content="Launch your Shopify store fast with expert setup services. Based in Singapore, we handle full store creation, design, and optimization for global success.">
     <meta name="keywords"
         content="Shopify development Singapore, Shopify experts, eCommerce development, Shopify store setup, custom Shopify themes, Shopify app development, Shopify SEO, Shopify migration, Shopify maintenance, Singapore eCommerce solutions">
     <meta name="author" content="Shopify Developers Company">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
     <!-- Enhanced Open Graph Meta Tags -->
-    <meta property="og:title" content="Shopify Theme Development | Shopify Development Company">
+    <meta property="og:title" content="Shopify Store Setup Services in Singapore ">
     <meta property="og:description"
-        content="Custom Shopify theme development in Singapore by Shopify Development Company. Create a unique, high-performing Shopify store with our expert Shopify theme development services.">
+        content="Launch your Shopify store fast with expert setup services. Based in Singapore, we handle full store creation, design, and optimization for global success.">
     <meta property="og:url" content="https://www.shopifydeveloperscompany.com">
     <meta property="og:image" content="https://www.shopifydeveloperscompany.com/assets/images/og-image.png">
     <meta property="og:type" content="website">
@@ -44,217 +44,19 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
 
-    <style>
-        /* Hamburger Menu Styles */
-        .hamburger-menu {
-            width: 30px;
-            height: 20px;
-            position: relative;
-            cursor: pointer;
-            z-index: 100000;
-        }
 
-        .hamburger-menu span {
-            display: block;
-            position: absolute;
-            height: 2px;
-            width: 100%;
-            background: #fff;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger-menu span:nth-child(1) {
-            top: 0;
-        }
-
-        .hamburger-menu span:nth-child(2) {
-            top: 9px;
-        }
-
-        .hamburger-menu span:nth-child(3) {
-            top: 18px;
-        }
-
-        /* Active state for hamburger menu */
-        .hamburger-menu.active span:nth-child(1) {
-            transform: rotate(45deg);
-            top: 9px;
-        }
-
-        .hamburger-menu.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger-menu.active span:nth-child(3) {
-            transform: rotate(-45deg);
-            top: 9px;
-        }
-
-        /* Desktop Navigation Styles */
-        .nav-menu {
-            display: block;
-        }
-
-        .nav-menu ul {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .nav-menu .group ul {
-            position: absolute;
-            left: 0;
-            top: 100%;
-            width: 240px;
-            background: white;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border-radius: 0.5rem;
-            padding: 0.5rem 0;
-            display: none;
-        }
-
-        .nav-menu .group:hover ul {
-            display: block;
-        }
-
-        .hide-resp {
-            display: none;
-        }
-
-        /* Mobile Menu Styles */
-        @media (min-width: 1200px) {
-            .hamburger-menu {
-                display: none !important;
-            }
-
-            .show-resp {
-                display: none;
-            }
-
-            .hide-resp {
-                display: block;
-            }
-        }
-
-        @media (max-width: 1200px) {
-            .hamburger-menu {
-                display: block !important;
-                width: 30px;
-                height: 20px;
-                position: relative;
-                cursor: pointer;
-                z-index: 100000;
-                background: transparent;
-                border: none;
-                padding: 0;
-            }
-
-            .hamburger-menu span {
-                display: block;
-                position: absolute;
-                height: 2px;
-                width: 100%;
-                background: #fff;
-                border-radius: 2px;
-                transition: all 0.3s ease;
-            }
-
-            .hamburger-menu span:nth-child(1) {
-                top: 0;
-            }
-
-            .hamburger-menu span:nth-child(2) {
-                top: 9px;
-            }
-
-            .hamburger-menu span:nth-child(3) {
-                top: 18px;
-            }
-
-            .hamburger-menu.active span:nth-child(1) {
-                transform: rotate(45deg);
-                top: 9px;
-            }
-
-            .hamburger-menu.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger-menu.active span:nth-child(3) {
-                transform: rotate(-45deg);
-                top: 9px;
-            }
-
-            .nav-menu {
-                position: fixed;
-                top: 0;
-                left: -100%;
-                width: 300px;
-                height: 100%;
-                background: #161616;
-                transition: all 0.3s ease;
-                z-index: 99999;
-                padding-top: 80px;
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-
-            .nav-menu.active {
-                left: 0;
-            }
-
-            .nav-menu ul {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 20px;
-            }
-
-            .nav-menu .group ul {
-                position: static;
-                width: 100%;
-                background: transparent;
-                box-shadow: none;
-                padding: 0;
-                margin-top: 10px;
-                display: none;
-            }
-
-            .nav-menu .group ul.active {
-                display: block;
-            }
-
-            .nav-menu .group ul li a {
-                color: #fff !important;
-            }
-
-            .nav-overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.5);
-                z-index: 99998;
-                display: none;
-            }
-
-            .nav-overlay.active {
-                display: block;
-            }
-        }
-    </style>
 </head>
 
 <body>
     <!-- Top Bar -->
-    <div class="top-bar p-[20px] flex justify-between items-center">
+    <div class="top-bar p-[20px] flex justify-between items-center lg:pb-[0px] ">
         <div class="left">
             <ul>
                 <li>
-                    <a href="#" class="flex items-center gap-[8px]">
+                    <a href="https://maps.app.goo.gl/wtedNjwqbvGt9Gh89" class="flex items-center gap-[8px]">
                         <img src="/assets/images/icons/map-icon.svg" alt="">
                         <span>190 Woodlands bizhub, #07-17, Singapore 757516</span>
                     </a>
@@ -286,7 +88,6 @@
         </div>
     </div>
 
-    <!-- Header -->
     <header class="px-[20px] pt-[20px] w-full sticky top-0 z-[99999]">
         <div class="header-inner flex gap-[10px]">
             <div
@@ -309,32 +110,46 @@
                 <nav class="nav-menu">
                     <ul class="flex items-center gap-[30px] justify-end">
                         <li>
-                            <a href="/">Home</a>
+                            <a href="/" class="">Home</a>
                         </li>
                         <li>
                             <a href="about-us.html">About Us</a>
                         </li>
                         <li class="relative group">
-                            <a href="/#services" class="flex items-center gap-[4px] active">Services</a>
+                            <a href="#"
+                                class="flex items-center gap-[4px] services-dropdown-trigger active">Services</a>
                             <ul
-                                class="absolute left-0 top-[100%] w-48 bg-white shadow-lg rounded-lg py-2 hidden group-hover:block">
+                                class="pointer-events-none opacity-0 translate-y-4 transition-all duration-300 ease-in-out  absolute left-0 top-[100%] w-48 bg-white shadow-lg rounded-lg py-2 hidden group-hover:block services-dropdown">
                                 <li><a href="shopify-store-migration-services.html"
                                         class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Store
                                         Migration</a>
                                 </li>
-                                <li><a href="ux-web.html" class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">UX &
-                                        Web
-                                        Design</a></li>
+                                <li><a href="shopify-maintenance-services-in-singapore.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Maintenance
+                                        & Support</a>
+                                </li>
+                                <li><a href="shopify-app-development-services.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify App
+                                        Development</a></li>
                                 <li><a href="shopify-speed-optimization-services.html"
                                         class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Speed
-                                        Optimization</a></li>
+                                        Optimization </a></li>
                                 <li><a href="shopify-theme-development-services.html"
                                         class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Theme
                                         Development</a></li>
+                                <li><a href="shopify-store-setup-services.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Store
+                                        Setup</a></li>
+                                <li><a href="shopify-theme-customization.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Theme
+                                        Customization</a></li>
+                                <li><a href="shopify-web-design-services.html"
+                                        class="block px-4 py-2 !text-[#1c1c1c] hover:bg-gray-100">Shopify Web
+                                        Design</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Previous Work</a>
+                            <a href="portfolio.html">Previous Work</a>
                         </li>
                         <li>
                             <a href="/#reviews" class="flex items-center gap-[4px]">
@@ -369,35 +184,32 @@
                 <div
                     class="hr-left flex flex-col gap-[20px] md:gap-[20px] xl:gap-[33px] lg:gap-[33px]  xl:justify-center lg:justify-center md:justify-center justify-center xl:items-start lg:items-start md:items-start">
                     <div class="work-direct">
-                        <span class="editor block w-fit">Shopify Theme Development</span>
+                        <span class="editor block w-fit">Shopify Store Setup</span>
                     </div>
 
                     <h1 class="sec-title st-service w-[120%] md:w-full lg:w-full xl:w-[120%]">
-                        Custom
-                        <span class="editor">Shopify <br> Theme Development</span> <br> Company in <b>Singapore</b> <br>
-                        & Worldwide
+                        Professional <span class="editor">Shopify <br> Store</span> Setup Services in Singapore
                     </h1>
 
-                    <h2 class="disc">We design and develop Shopify themes from scratch – fast, scalable, and tailored to
-                        your brand.</h2>
+                    <h2 class="disc">We help you launch a fully functional, beautifully designed Shopify store — fast,
+                        optimized, and ready for sales.</h2>
 
                     <div
                         class="hero-ctas flex gap-[10px] flex-wrap md:gap-[12px] xl:gap-[20px] lg:gap-[20px] items-center lg:justify-start md:justify-start xl:justify-start justify-center xl:justify-start">
                         <a href="Contact-us.html" class="fr-button">
                             <img src="assets/images/icons/btn-arrow.webp" alt="">
-                            Get a Free Quote
+                            Launch My Shopify Store
                         </a>
                         <a href="Contact-us.html" class="fr-button">
                             <img src="assets/images/icons/arrow-upward.webp" alt="">
-                            Hire Shopify Theme Developers
+                            Get Setup Assistance
                         </a>
                     </div>
                 </div>
 
                 <div class="hr-right">
                     <div class="abtc-img max-w-[447px] ml-auto">
-                        <img class="w-full block object-contain" src="assets/images/theme-dev-col_converted.webp"
-                            alt="">
+                        <img class="w-full block object-contain" src="assets/images/sss-col_converted.webp" alt="">
                     </div>
                 </div>
             </div>
@@ -414,19 +226,18 @@
                 </span>
 
                 <h2 class="sec-title mb-[16px] text-center">
-                    Custom-Built
-                    <span class="editor">Shopify Themes</span> for <br> Maximum Impact
+                    Complete Shopify <span class="editor">Store Setup</span> Services – From Launch to Growth
                 </h2>
 
-                <p class="disc">We are a top-rated Shopify theme development company delivering fully custom,
-                    high-converting themes for brands in Singapore and across the globe. Whether you're launching a new
-                    store or redesigning an existing one, our expert Shopify theme developers build every theme from
-                    scratch to match your business goals, branding, and performance needs.</p>
+                <p class="disc">Need help setting up your Shopify store? We provide end-to-end Shopify store setup
+                    services for businesses in Singapore and worldwide. From store creation, theme configuration, and
+                    app installation to payment, shipping, and SEO setup — we handle everything so you can focus on
+                    selling.</p>
             </div>
 
             <div class="about-bottom">
                 <div class="btn-boxes flex justify-center items-center xl:gap-[30px] gap-[10px]">
-                    <a href="Contact-us.html" class="fr-button">
+                    <a href="https://calendly.com/shopifydeveloperscompany/30min" target="_blank" class="fr-button">
                         <img src="assets/images/icons/btn-arrow.webp" alt="">
                         Book a Free Consultion
                     </a>
@@ -478,8 +289,9 @@
                     <span class="editor">What We Offer</span>
                 </div>
 
-                <h2 class="sec-title text-center max-w-[100%] mb-[0]">
-                    Our <span class="editor"> Shopify Theme Development </span>Services
+                <h2 class="sec-title text-center max-w-[100%] mb-[0]"> What’s Included in Our <br><span
+                        class="editor">Shopify Setup</span> Services
+
                 </h2>
             </div>
             <div class="wcu-grid wcu-flexed flex flex-wrap justify-center xl:gap-[30px] gap-[16px]">
@@ -492,10 +304,10 @@
                     </div>
                     <div>
                         <h3
-                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
-                            Custom Shopify Theme Development</h3>
-                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Fully tailored themes
-                            coded from scratch.</p>
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1.1px] mb-[12px]">
+                            Shopify Store Creation</h3>
+                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Complete new store
+                            setup with your business goals in mind</p>
                     </div>
                     <a href="Contact-us.html"
                         class="jk font-semibold underline text-[#1C1C1C] text-[14px] leading-[150%] uppercase hover:text-[#95BF47] transition flex gap-[8px] items-center mt-auto">
@@ -512,9 +324,9 @@
                     <div>
                         <h3
                             class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
-                            Theme Design & Redesign</h3>
-                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">UX/UI focused,
-                            mobile-first, modern design.</p>
+                            Theme Installation & Configuration </h3>
+                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]"> Apply and tweak a
+                            professional theme</p>
                     </div>
                     <a href="Contact-us.html"
                         class="jk font-semibold underline text-[#1C1C1C] text-[14px] leading-[150%] uppercase hover:text-[#95BF47] transition flex gap-[8px] items-center mt-auto">
@@ -531,9 +343,9 @@
                     <div>
                         <h3
                             class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
-                            Build Shopify Theme from Scratch</h3>
-                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Pixel-perfect,
-                            fast-loading themes built for performance.</p>
+                            Navigation & Pages Setup</h3>
+                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Home, collections,
+                            product, cart, about, and policy pages</p>
                     </div>
                     <a href="Contact-us.html"
                         class="jk font-semibold underline text-[#1C1C1C] text-[14px] leading-[150%] uppercase hover:text-[#95BF47] transition flex gap-[8px] items-center mt-auto">
@@ -550,9 +362,9 @@
                     <div>
                         <h3
                             class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
-                            Hire Shopify Theme Developers</h3>
-                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Dedicated developers
-                            available for full projects or as part of your team.</p>
+                            Product & Collection Uploads</h3>
+                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Add up to X products
+                            with proper categorization</p>
                     </div>
                     <a href="Contact-us.html"
                         class="jk font-semibold underline text-[#1C1C1C] text-[14px] leading-[150%] uppercase hover:text-[#95BF47] transition flex gap-[8px] items-center mt-auto">
@@ -569,9 +381,85 @@
                     <div>
                         <h3
                             class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
-                            Theme Optimization & Support</h3>
-                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Speed, SEO,
-                            responsiveness, and post-launch support.</p>
+                            Shopify Plus App Development</h3>
+                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Enable gateways and
+                            real-time shipping rates</p>
+                    </div>
+                    <a href="Contact-us.html"
+                        class="jk font-semibold underline text-[#1C1C1C] text-[14px] leading-[150%] uppercase hover:text-[#95BF47] transition flex gap-[8px] items-center mt-auto">
+                        Hire us to design your future store <img class="w-[20px] h-[20px] object-contain block"
+                            src="assets/images/icons/go.svg" alt=""></a>
+                </div>
+                <div
+                    class="wcu-card bg-white rounded-[20px] p-[20px] flex flex-col gap-[24px] text-left border border-1 border-[#1C1C1C1A]">
+                    <div class="flex items-center">
+                        <div class="img-number bg-blue h-[48px] w-[48px] shadow rounded-full">
+                            <span>6</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
+                            App Integration</h3>
+                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Install essential
+                            Shopify apps (reviews, chat, marketing, etc.)</p>
+                    </div>
+                    <a href="Contact-us.html"
+                        class="jk font-semibold underline text-[#1C1C1C] text-[14px] leading-[150%] uppercase hover:text-[#95BF47] transition flex gap-[8px] items-center mt-auto">
+                        Hire us to design your future store <img class="w-[20px] h-[20px] object-contain block"
+                            src="assets/images/icons/go.svg" alt=""></a>
+                </div>
+                <div
+                    class="wcu-card bg-white rounded-[20px] p-[20px] flex flex-col gap-[24px] text-left border border-1 border-[#1C1C1C1A]">
+                    <div class="flex items-center">
+                        <div class="img-number h-[48px] w-[48px] shadow rounded-full">
+                            <span>7</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1.2px] mb-[12px]">
+                            Mobile Optimization</h3>
+                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Ensure a responsive
+                            experience across all devices</p>
+                    </div>
+                    <a href="Contact-us.html"
+                        class="jk font-semibold underline text-[#1C1C1C] text-[14px] leading-[150%] uppercase hover:text-[#95BF47] transition flex gap-[8px] items-center mt-auto">
+                        Hire us to design your future store <img class="w-[20px] h-[20px] object-contain block"
+                            src="assets/images/icons/go.svg" alt=""></a>
+                </div>
+                <div
+                    class="wcu-card bg-white rounded-[20px] p-[20px] flex flex-col gap-[24px] text-left border border-1 border-[#1C1C1C1A]">
+                    <div class="flex items-center">
+                        <div class="img-number bg-blue h-[48px] w-[48px] shadow rounded-full">
+                            <span>8</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
+                            Basic SEO & Analytics</h3>
+                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Make sure
+                             Meta tags, Google Analytics, and Search Console setup</p>
+                    </div>
+                    <a href="Contact-us.html"
+                        class="jk font-semibold underline text-[#1C1C1C] text-[14px] leading-[150%] uppercase hover:text-[#95BF47] transition flex gap-[8px] items-center mt-auto">
+                        Hire us to design your future store <img class="w-[20px] h-[20px] object-contain block"
+                            src="assets/images/icons/go.svg" alt=""></a>
+                </div>
+                <div
+                    class="wcu-card bg-white rounded-[20px] p-[20px] flex flex-col gap-[24px] text-left border border-1 border-[#1C1C1C1A]">
+                    <div class="flex items-center">
+                        <div class="img-number h-[48px] w-[48px] shadow rounded-full">
+                            <span>9</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
+                            Guided Training & Handover</h3>
+                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Make sure
+                            Learn how to manage your new store</p>
                     </div>
                     <a href="Contact-us.html"
                         class="jk font-semibold underline text-[#1C1C1C] text-[14px] leading-[150%] uppercase hover:text-[#95BF47] transition flex gap-[8px] items-center mt-auto">
@@ -591,13 +479,12 @@
                 </div>
 
                 <h2 class="sec-title mb-[32px] text-center !text-white">
-                    Serving <span class="editor">Clients</span> in <span class="editor">Singapore</span> & Globally
+                    Based in Singapore — Serving <br> New <span class="editor">Shopify Store</span> Owners Globally
                 </h2>
 
-                <p class="disc !text-white">
-                    Headquartered in Singapore, we collaborate with businesses worldwide to deliver Shopify development
-                    services with the highest standard. Whether you're a local startup or an international brand, we
-                    offer seamless communication, reliable timelines, and unmatched code quality.
+                <p class="disc !text-white">Whether you’re a local brand in Singapore or an entrepreneur abroad, we help
+                    you set up your Shopify store from scratch — fast, clean, and ready to sell. We’re trusted Shopify
+                    store setup experts who work with service-based businesses and product sellers alike.
                 </p>
             </div>
             <div class="map-img mx-auto">
@@ -619,31 +506,30 @@
                     <span class="editor">Why Choose us?</span>
                 </div>
 
-                <h2 class="sec-title text-center mb-[24px] xl:max-w-[770px] max-w-[100%]">
-                    Why Hire our <span class="editor">Shopify</span> Theme <span class="editor">Development</span>
-                    Company?
+                <h2 class="sec-title text-center mb-[24px] xl:max-w-[100%] max-w-[100%]">
+                    Why Work With Our <span class="editor">Shopify Store</span> Setup Experts?
+
                 </h2>
 
-                <!-- <p class="disc text-center">
-                    Shopify Development Company is a leading Shopify experts team specializing in building custom
-                    Shopify stores across industries. Whether you need a clean, high-converting single-product store or
-                    a complex multi-brand Shopify Plus marketplace, we have the skills and experience to bring your
-                    vision to life. Let us help you build a powerful, scalable Shopify store tailored perfectly to your
-                    business needs! </p> -->
+                <!-- <p class="disc text-center">Shopify Development Company is a leading Shopify experts team specializing
+                    in building custom Shopify stores across industries. Whether you need a clean, high-converting
+                    single-product store or a complex multi-brand Shopify Plus marketplace, we have the skills and
+                    experience to bring your vision to life. Let us help you build a powerful, scalable Shopify store
+                    tailored perfectly to your business needs!</p> -->
             </div>
-            <div class="wcu-grid wcu-flexed stretched-cards flex flex-wrap justify-center xl:gap-[30px] gap-[16px]">
+            <div class="wcu-grid wcu-flexed flex flex-wrap justify-center xl:gap-[30px] gap-[16px]">
                 <div
                     class="wcu-card bg-white rounded-[20px] p-[20px] flex flex-col gap-[24px] text-left border border-1 border-[#1C1C1C1A]">
                     <div class="flex items-center">
-                        <img src="assets/images/icons/whyhire-td-1.svg" alt=""
+                        <img src="assets/images/icons/whywork-sss-01.svg" alt=""
                             class="h-[48px] w-[48px] shadow rounded-full block object-contain">
                     </div>
                     <div>
                         <h3
                             class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
-                            Fully Custom-Built Themes</h3>
-                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">100% custom-coded
-                            themes — no templates.</p>
+                            100% done-for-you Shopify setup services</h3>
+                        <!-- <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Deep expertise in
+                            Shopify API, Liquid, Polaris, and Storefront APIs.</p> -->
                     </div>
                     <a href="Contact-us.html"
                         class="jk font-semibold underline text-[#1C1C1C] text-[14px] leading-[150%] uppercase hover:text-[#95BF47] transition flex gap-[8px] items-center mt-auto">
@@ -653,15 +539,15 @@
                 <div
                     class="wcu-card bg-white rounded-[20px] p-[20px] flex flex-col gap-[24px] text-left border border-1 border-[#1C1C1C1A]">
                     <div class="flex items-center">
-                        <img src="assets/images/icons/whyhire-td-2.svg" alt=""
+                        <img src="assets/images/icons/whywork-sss-02.svg" alt=""
                             class="h-[48px] w-[48px] shadow rounded-full block object-contain">
                     </div>
                     <div>
                         <h3
                             class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
-                            Optimized for SEO & Mobile</h3>
-                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">SEO-ready, responsive,
-                            mobile-first designs.</p>
+                            Mobile-optimized and SEO-ready from day one</h3>
+                        <!-- <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Clean, scalable, and
+                            performance-optimized code.</p> -->
                     </div>
                     <a href="Contact-us.html"
                         class="jk font-semibold underline text-[#1C1C1C] text-[14px] leading-[150%] uppercase hover:text-[#95BF47] transition flex gap-[8px] items-center mt-auto">
@@ -671,15 +557,15 @@
                 <div
                     class="wcu-card bg-white rounded-[20px] p-[20px] flex flex-col gap-[24px] text-left border border-1 border-[#1C1C1C1A]">
                     <div class="flex items-center">
-                        <img src="assets/images/icons/whyhire-td-3.svg" alt=""
+                        <img src="assets/images/icons/whywork-sss-03.svg" alt=""
                             class="h-[48px] w-[48px] shadow rounded-full block object-contain">
                     </div>
                     <div>
                         <h3
                             class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
-                            Efficient & Scalable Codebase</h3>
-                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Fast turnaround, clean
-                            code, Git versioning.</p>
+                            Fast turnaround (3-7 days depending on complexity)</h3>
+                        <!-- <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Apps built for
+                            security, flexibility, and speed.</p> -->
                     </div>
                     <a href="Contact-us.html"
                         class="jk font-semibold underline text-[#1C1C1C] text-[14px] leading-[150%] uppercase hover:text-[#95BF47] transition flex gap-[8px] items-center mt-auto">
@@ -689,15 +575,15 @@
                 <div
                     class="wcu-card bg-white rounded-[20px] p-[20px] flex flex-col gap-[24px] text-left border border-1 border-[#1C1C1C1A]">
                     <div class="flex items-center">
-                        <img src="assets/images/icons/whyhire-td-4.svg" alt=""
+                        <img src="assets/images/icons/whywork-sss-04.svg" alt=""
                             class="h-[48px] w-[48px] shadow rounded-full block object-contain">
                     </div>
                     <div>
                         <h3
                             class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
-                            Future-Ready Shopify 2.0 Support</h3>
-                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Shopify 2.0 support
-                            and app integration ready.</p>
+                            Transparent pricing with no hidden costs</h3>
+                        <!-- <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Shopify Partner agency
+                            based in Singapore.</p> -->
                     </div>
                     <a href="Contact-us.html"
                         class="jk font-semibold underline text-[#1C1C1C] text-[14px] leading-[150%] uppercase hover:text-[#95BF47] transition flex gap-[8px] items-center mt-auto">
@@ -707,15 +593,33 @@
                 <div
                     class="wcu-card bg-white rounded-[20px] p-[20px] flex flex-col gap-[24px] text-left border border-1 border-[#1C1C1C1A]">
                     <div class="flex items-center">
-                        <img src="assets/images/icons/whyhire-td-5.svg" alt=""
+                        <img src="assets/images/icons/whywork-sss-05.svg" alt=""
                             class="h-[48px] w-[48px] shadow rounded-full block object-contain">
                     </div>
                     <div>
                         <h3
                             class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
-                            Transparent & Reliable Team</h3>
-                        <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Transparent pricing,
-                            full-stack development team.</p>
+                            Post-launch support and tutorials included</h3>
+                        <!-- <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Agile workflow — from
+                            ideation to deployment.</p> -->
+                    </div>
+                    <a href="Contact-us.html"
+                        class="jk font-semibold underline text-[#1C1C1C] text-[14px] leading-[150%] uppercase hover:text-[#95BF47] transition flex gap-[8px] items-center mt-auto">
+                        Request a Consultation <img class="w-[20px] h-[20px] object-contain block"
+                            src="assets/images/icons/go.svg" alt=""></a>
+                </div>
+                <div
+                    class="wcu-card bg-white rounded-[20px] p-[20px] flex flex-col gap-[24px] text-left border border-1 border-[#1C1C1C1A]">
+                    <div class="flex items-center">
+                        <img src="assets/images/icons/whywork-sss-06.svg" alt=""
+                            class="h-[48px] w-[48px] shadow rounded-full block object-contain">
+                    </div>
+                    <div>
+                        <h3
+                            class="jk text-[#1C1C1C] font-semibold text-[32px] sm:text-[22px] md:text-[26px] lg:text-[32px] leading-[110%] tracking-[-1px] mb-[12px]">
+                            Optional upgrades: design, copywriting, photography</h3>
+                        <!-- <p class="jk text-[#5A5A5AB2] text-[16px] leading-[158%] tracking-[-1px]">Post-launch app
+                            support & upgrade packages available.</p> -->
                     </div>
                     <a href="Contact-us.html"
                         class="jk font-semibold underline text-[#1C1C1C] text-[14px] leading-[150%] uppercase hover:text-[#95BF47] transition flex gap-[8px] items-center mt-auto">
@@ -732,34 +636,33 @@
             <div
                 class="subs-inner xl:py-[70px] py-[30px] xl:px-[93px] px-[15px] flex flex-col items-center justify-center">
                 <h2 class="sec-title mb-[20px] text-center">
-                    Let’s Build Your <span class="editor"> Shopify Theme</span>
+                    Let’s Customize Your <span class="editor"> Shopify Store</span> Today
                 </h2>
 
-                <p class="disc text-center mb-[40px] max-w-[690px]">
-                    Ready to get started? Contact our team to hire Shopify theme developers and start building a custom
-                    Shopify theme that gets results.
-                </p>
+                <p class="disc text-center mb-[40px] max-w-[730px]">
+                    Whether you're in Singapore or running a global ecommerce business, our Shopify migration experts
+                    are ready to guide your store to a smooth and successful transition.Whether you’re figuring out how
+                    to customize your Shopify website or you’re ready to build a custom Shopify theme from scratch,
+                    we’re here to help. Get in touch to bring your vision to life.</p>
                 <div
                     class="mg-subs-btns px-[16px] xl:px-[0] lg:px-[0] md:px-[0] sm:px-[16px] btn-boxes flex justify-center items-center gap-[10px] xl:gap-[30px]  md:gap-[30px] sm:gap-[10px]">
-                    <a href="Contact-us.html" class="fr-button">
+                    <a href="https://calendly.com/shopifydeveloperscompany/30min" target="_blank" class="fr-button">
                         <img src="assets/images/icons/btn-arrow.webp" alt="">
-                        Book a Consultation
+                        Book a Free Consultation
                     </a>
 
-                    <a href="Portfolio.html" class="fr-button pr-btn">
+                    <a href="Contact-us.html" class="fr-button pr-btn">
                         <img src="assets/images/icons/arrow-upward.webp" alt="">
-                        View Our Work
+                        Start Your Custom Theme Now
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="pt-[302px] w-full">
         <div class="my-container">
-            <div
-                class="footer-top grid xl:grid-cols-[360px_1fr] grid-cols-1 gap-[40px] pb-[80px] lg:gap-[60px] lg:grid-cols-[430px_1fr]">
+            <div class="footer-top grid gap-[40px] pb-[80px] lg:gap-[60px] lg:grid-cols-[430px_1fr]">
                 <div class="ft-left flex flex-col gap-[50px]">
                     <img class="footer-logo" src="assets/images/Logo.svg" alt="">
 
@@ -769,7 +672,7 @@
                     </form>
 
                     <ul class="flex items-center gap-[16px]">
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <img src="assets/images/icons/facebook.svg" alt="">
                             </a>
@@ -778,7 +681,7 @@
                             <a href="#">
                                 <img src="assets/images/icons/twitter.svg" alt="">
                             </a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="https://www.linkedin.com/company/shopifydevelopmentagency/">
                                 <img src="assets/images/icons/in.svg" alt="">
@@ -803,10 +706,13 @@
                                 <a href="about-us.html">About Us</a>
                             </li>
                             <li>
-                                <a href="/#services">Services</a>
+                                <a href="services.html">Services</a>
                             </li>
                             <li>
-                                <a href="/#services">Previous Work</a>
+                                <a href="portfolio.html">Previous Work</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">FAQs</a>
                             </li>
                             <li>
                                 <a href="Contact-us.html">Contact US</a>
@@ -859,211 +765,18 @@
 
 
 
+    <div class="nav-overlay"></div>
+
 
 
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
     <!-- Initialize Swiper -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="assets/js/custom.js"></script>
-
-    <script>
-        const formmmmm = document.getElementById('contactForm');
-        if (formmmmm) {
-            formmmmm.addEventListener('submit', function (event) {
-                event.preventDefault();
-
-                // Reset any previous error states
-                resetErrorStates();
-
-                // Validate form
-                if (!validateForm()) {
-                    return;
-                }
-
-                // Collect form data
-                const formData = {
-                    firstName: document.getElementById('firstName').value,
-                    lastName: document.getElementById('lastName').value,
-                    email: document.getElementById('email').value,
-                    website: document.getElementById('website').value,
-                    service: document.getElementById('service').value,
-                    budget: document.getElementById('budget').value,
-                    timeline: document.getElementById('timeline').value,
-                    message: document.getElementById('message').value
-                };
-
-                // Send the form data
-                fetch('/rest/contact-form.php', {
-                    method: 'POST',
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Accept": "application/json",
-                    },
-                    body: JSON.stringify(formData)
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.code === "200") {
-                            showMessage('submitSuccessMessage');
-                            document.getElementById('contactForm').reset();
-                        } else {
-                            showMessage('submitErrorMessage');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        showMessage('submitErrorMessage');
-                    });
-            });
-
-            function validateForm() {
-                let isValid = true;
-
-                // Required fields validation
-                const requiredFields = ['firstName', 'email', 'service', 'message'];
-                requiredFields.forEach(field => {
-                    const element = document.getElementById(field);
-                    if (!element.value.trim()) {
-                        showError(element, 'This field is required');
-                        isValid = false;
-                    }
-                });
-
-                // Email validation
-                const email = document.getElementById('email');
-                if (email.value.trim() && !isValidEmail(email.value)) {
-                    showError(email, 'Please enter a valid email address');
-                    isValid = false;
-                }
-
-                // Website URL validation (if provided)
-                const website = document.getElementById('website');
-                if (website.value.trim() && !isValidURL(website.value)) {
-                    showError(website, 'Please enter a valid URL');
-                    isValid = false;
-                }
-
-                return isValid;
-            }
-
-            function isValidEmail(email) {
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return emailRegex.test(email);
-            }
-
-            function isValidURL(url) {
-                try {
-                    new URL(url);
-                    return true;
-                } catch {
-                    return false;
-                }
-            }
-
-            function showError(element, message) {
-                // Add error class to the parent field-row
-                const fieldRow = element.closest('.field-row');
-                fieldRow.classList.add('error');
-
-                // Create or update error message
-                let errorDiv = fieldRow.querySelector('.error-message');
-                if (!errorDiv) {
-                    errorDiv = document.createElement('div');
-                    errorDiv.className = 'error-message';
-                    fieldRow.appendChild(errorDiv);
-                }
-                errorDiv.textContent = message;
-            }
-
-            function resetErrorStates() {
-                // Remove all error states and messages
-                document.querySelectorAll('.field-row.error').forEach(row => {
-                    row.classList.remove('error');
-                    const errorMessage = row.querySelector('.error-message');
-                    if (errorMessage) {
-                        errorMessage.remove();
-                    }
-                });
-            }
-
-            function showMessage(type) {
-                // type: 'submitSuccessMessage' or 'submitErrorMessage'
-                let message = '';
-                let toastClass = '';
-                let icon = '';
-                if (type === 'submitSuccessMessage') {
-                    message = 'Thank you! Your message has been sent successfully.';
-                    toastClass = 'toast-success';
-                    icon = '✅';
-                } else {
-                    message = 'Sorry, there was an error sending your message. Please try again later.';
-                    toastClass = 'toast-error';
-                    icon = '❌';
-                }
-                const toastContainer = document.getElementById('toast-container');
-                const toast = document.createElement('div');
-                toast.className = `toast-message ${toastClass}`;
-                toast.innerHTML = `<span class='toast-icon'>${icon}</span> ${message}`;
-                toastContainer.appendChild(toast);
-                // Remove after animation
-                setTimeout(() => {
-                    toast.remove();
-                }, 5000);
-            }
-        }
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script src="assets/js/custom.js" defer></script>
 
 
-
-        // Mobile Menu Toggle
-        const hamburgerMenu = document.querySelector('.hamburger-menu');
-        const navMenu = document.querySelector('.nav-menu');
-        const navOverlay = document.querySelector('.nav-overlay');
-        const servicesLink = document.querySelector('.group > a');
-        const servicesDropdown = document.querySelector('.group > ul');
-
-        function toggleMenu() {
-            hamburgerMenu.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            navOverlay.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-        }
-
-        // Handle mobile menu
-        // if (window.innerWidth <= 1200) {
-        hamburgerMenu.addEventListener('click', toggleMenu);
-        navOverlay.addEventListener('click', toggleMenu);
-
-        // Handle services dropdown in mobile view
-        servicesLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            servicesDropdown.classList.toggle('active');
-        });
-        // }
-
-        // Close menu when clicking on a link
-        const navLinks = document.querySelectorAll('.nav-menu a:not(.group > a)');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 1200) {
-                    toggleMenu();
-                }
-            });
-        });
-
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 1200) {
-                // Reset mobile menu state
-                hamburgerMenu.classList.remove('active');
-                navMenu.classList.remove('active');
-                navOverlay.classList.remove('active');
-                document.body.style.overflow = '';
-                servicesDropdown.classList.remove('active');
-            }
-        });
-    </script>
 
 </body>
 
