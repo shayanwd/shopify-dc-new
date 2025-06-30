@@ -613,6 +613,34 @@
     <script src="assets/js/custom.js" defer></script>
 
 
+    <script>
+        const headers = document.querySelectorAll('.accordion-header');
+
+        headers.forEach(header => {
+            header.addEventListener('click', () => {
+                const body = header.nextElementSibling;
+                const isOpen = body.classList.contains('open');
+
+                // Close all
+                document.querySelectorAll('.accordion-body').forEach(b => {
+                    b.classList.remove('open');
+                    b.style.maxHeight = null;
+                });
+
+                document.querySelectorAll('.accordion-header').forEach(h => {
+                    h.classList.remove('active');
+                });
+
+                // Open selected
+                if (!isOpen) {
+                    body.classList.add('open');
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                    header.classList.add('active');
+                }
+            });
+        });
+    </script>
+
 
 </body>
 
