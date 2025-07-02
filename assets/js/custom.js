@@ -184,7 +184,7 @@ const formmmmm = document.getElementById('contactForm');
                 };
 
                 // Send the form data
-                fetch('https://dev.frototype.agency/shopifydevelopment/rest/contact-form.php', {
+                fetch('https://shopifydeveloperscompany.com/rest/contact-form.php', {
                     method: 'POST',
                     headers: {
                         "Content-Type": "application/json",
