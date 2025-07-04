@@ -376,6 +376,15 @@
         max-width: 100% !important;
         flex-basis: calc(100% / 2 - 20px) !important;
     }
+
+    .blog-box h3 {
+        font-size: 24px;
+    }
+
+
+    .right .content h3 {
+        font-size: 22px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -661,6 +670,27 @@
         min-width: auto !important;
         padding-left: 30px !important;
         padding-right: 30px !important;
+    }
+
+    .bottom-blog-box {
+        grid-template-columns: 1fr 34%;
+    }
+
+    .blog-grid.grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-box-head h2 {
+        font-size: 30px !important;
+    }
+
+    .right .content {
+        width: 100%;
+    }
+
+    .right .img {
+        width: 80px;
+        height: 80px;
     }
 }
 
