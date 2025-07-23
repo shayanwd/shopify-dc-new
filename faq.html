@@ -46,6 +46,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -177,16 +178,16 @@
         <div class="my-container">
             <div class="pr-top flex flex-col justify-center items-center">
                 <h1
-                    class="sec-title fs-title mb-[16px] text-center xl:mb-[32px] lg:mb-[32px] md:mb-[32px] sm:mb-[16px]">
+                    class="sec-title fs-title mb-[16px] text-center xl:mb-[32px] lg:mb-[32px] md:mb-[32px] sm:mb-[16px]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                     Frequently Asked <span class="editor">Questions</span>
                 </h1>
 
-                <p class="disc max-w-[500px]">
+                <p class="disc max-w-[500px]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     Stuck on something? We're here to help with all your questions and answers in one place.
                 </p>
             </div>
 
-            <div class="faqs-inner mt-[40px] xl:mt-[100px] lg:mt-[100px] md:mt-[100px] sm:mt-[40px]">
+            <div class="faqs-inner mt-[40px] xl:mt-[100px] lg:mt-[100px] md:mt-[100px] sm:mt-[40px]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                 <div class="accordion">
                     <div class="accordion-item">
                         <button class="accordion-header">
@@ -478,23 +479,22 @@
         <div class="my-container">
             <div
                 class="subs-inner px-[20px] py-[50px] xl:py-[70px] lg:py-[70px] md:py-[70px] sm:py-[50px] xl:px-[93px] lg:px-[93px] md:px-[93px] sm:px-[20px] flex flex-col items-center justify-center">
-                <h1 class="sec-title mb-[20px] text-center">
+                <h1 class="sec-title mb-[20px] text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                     <span class="editor">Subscribe.</span>
                     Request. Receive.
                 </h1>
 
-                <p class="disc text-center mb-[40px] max-w-[690px]">
+                <p class="disc text-center mb-[40px] max-w-[690px]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     Get started with a flexible monthly plan, submit your Shopify tasks, and
                     receive top-quality results—fast and hassle-free.
                 </p>
-                <a href="https://calendly.com/shopifydevelopers/30min" target="_blank" class="fr-button">
+                <a href="https://calendly.com/shopifydevelopers/30min" target="_blank" class="fr-button" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                     <img src="assets/images/icons/btn-arrow.webp" alt="">
                     Book a Call Now
                 </a>
             </div>
         </div>
     </section>
-
 
     <footer class="pt-[302px] w-full">
         <div class="my-container">
@@ -641,6 +641,10 @@
         });
     </script>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
